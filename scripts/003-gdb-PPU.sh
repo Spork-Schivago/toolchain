@@ -4,20 +4,16 @@
 GDB="gdb-7.6.1"
 
 if [ ! -d ${GDB} ]; then
-
-  ## Download the source code.
+  ## Download the source code
   if [ ! -f ${GDB}.tar.bz2 ]; then wget --continue ftp://ftp.gnu.org/gnu/gdb/${GDB}.tar.bz2; fi
 
   ## Unpack the source code.
-  tar xfvj ${GDB}.tar.bz2
-
+  tar -jxvf ${GDB}.tar.bz2
 fi
 
+## Create the build directory.
 if [ ! -d ${GDB}/build-ppu ]; then
-
-  ## Create the build directory.
   mkdir ${GDB}/build-ppu
-
 fi
 
 ## Enter the build directory.

@@ -4,10 +4,10 @@
 BINUTILS="binutils-2.23.2"
 BFD="BFD"
 
-if [ -d ${BINUTILS}/build-ppu/${BFD}-PPU ]; then
-	rm -rf ${BINUTILS}/build-ppu/${BFD}-PPU;
-fi
+## Remove the BFD-PPU directory
+rm -rf ${BINUTILS}/build-ppu/${BFD}-PPU
 
+## Create the BFD-PPU directory
 mkdir ${BINUTILS}/build-ppu/${BFD}-PPU
 
 ## Patch the source code if a patch file exists.

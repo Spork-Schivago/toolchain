@@ -4,12 +4,11 @@
 BINUTILS="binutils-2.23.2"
 
 if [ ! -d ${BINUTILS} ]; then
-
   ## Download the source code.
   if [ ! -f ${BINUTILS}.tar.bz2 ]; then wget --continue ftp://ftp.gnu.org/gnu/binutils/${BINUTILS}.tar.bz2; fi
 
   ## Unpack the source code.
-  tar xfvj ${BINUTILS}.tar.bz2
+  tar -jxvf ${BINUTILS}.tar.bz2
 
   ## Patch the source code if a patch file exists.
   if [ -f ../patches/${BINUTILS}-PS3.patch ]; then
@@ -17,11 +16,9 @@ if [ ! -d ${BINUTILS} ]; then
   fi
 fi
 
+## Create the build directory.
 if [ ! -d ${BINUTILS}/build-spu ]; then
-
-  ## Create the build directory.
   mkdir ${BINUTILS}/build-spu
-
 fi
 
 ## Enter the build directory.

@@ -7,7 +7,7 @@ PS3ELF="ps3elf"
 ## because we have no place to host it {:-(
 if [ ! -f ../${PS3ELF}.tar.xz ]; then
   echo "This distribution must have the ${PS3ELF}.tar.xz file in the root directory of the toolchain...";
-  exit
+  exit 1
 else
 ## We found our archive, move it to the build directory.
   cp ../${PS3ELF}.tar.xz .

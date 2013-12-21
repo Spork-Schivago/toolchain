@@ -4,16 +4,16 @@
 BINUTILS="binutils-2.23.2"
 LIBIBERTY="libiberty"
 
-if [ -d ${BINUTILS}/build-ppu/${LIBIBERTY}-PPU ]; then
-	rm -rf ${BINUTILS}/build-ppu/${LIBIBERTY}-PPU;
-fi
+## Remove the libiberty-PPU directory
+rm -rf ${BINUTILS}/build-ppu/${LIBIBERTY}-PPU
 
+## Create the libiberty-PPU directory
 mkdir ${BINUTILS}/build-ppu/${LIBIBERTY}-PPU
 
 ## Patch the source code if a patch file exists.
 if [ -f ../patches/${LIBIBERTY}-PPU.patch ]; then
-	echo "Patching ${LIBIBERTY}"
-	cat ../patches/${LIBIBERTY}-PPU.patch | patch -p1 -d ${BINUTILS}
+  echo "Patching ${LIBIBERTY}"
+  cat ../patches/${LIBIBERTY}-PPU.patch | patch -p1 -d ${BINUTILS}
 fi
 
 

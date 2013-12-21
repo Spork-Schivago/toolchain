@@ -8,7 +8,7 @@ if [ ! -f ${PSL1GHT_SDK}.tar.gz ]; then
 fi
 
 ## Unpack the source code.
-rm -Rf ${PSL1GHT_SDK} && mkdir ${PSL1GHT_SDK} && tar --strip-components=1 --directory=${PSL1GHT_SDK} -xvzf ${PSL1GHT_SDK}.tar.gz
+rm -Rf ${PSL1GHT_SDK} && mkdir ${PSL1GHT_SDK} && tar --strip-components=1 --directory=${PSL1GHT_SDK} -zxvf ${PSL1GHT_SDK}.tar.gz
 
 ## Create the build directory.
 cd ${PSL1GHT_SDK}

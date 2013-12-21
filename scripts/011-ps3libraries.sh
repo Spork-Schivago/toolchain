@@ -7,7 +7,7 @@ PS3LIBS="ps3libraries"
 ## because we have no place to host it {:-(
 if [ ! -f ../${PS3LIBS}.tar.xz ]; then
   echo "This distribution must have the ${PS3LIBS}.tar.xz file in the root directory of the toolchain...";
-  exit
+  exit 1
 else
 ## We found our archive, move it to the build directory.
   cp ../${PS3LIBS}.tar.xz .

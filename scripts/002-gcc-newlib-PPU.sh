@@ -4,42 +4,41 @@
 GCC="gcc-4.8.2"
 NEWLIB="newlib-2.0.0"
 
-  ## Download the source code.
-  if [ ! -f ${GCC}.tar.bz2 ]; then wget --continue ftp://ftp.gnu.org/gnu/gcc/${GCC}/${GCC}.tar.bz2; fi
-  if [ ! -f ${NEWLIB}.tar.gz ]; then wget --continue ftp://sources.redhat.com/pub/newlib/${NEWLIB}.tar.gz; fi
+## Download the source code.
+if [ ! -f ${GCC}.tar.bz2 ]; then wget --continue ftp://ftp.gnu.org/gnu/gcc/${GCC}/${GCC}.tar.bz2; fi
+if [ ! -f ${NEWLIB}.tar.gz ]; then wget --continue ftp://sources.redhat.com/pub/newlib/${NEWLIB}.tar.gz; fi
 
-  ## Remove the directories
-  rm -Rf ${GCC} && tar xfvj ${GCC}.tar.bz2
-  rm -Rf ${NEWLIB} && tar xfvz ${NEWLIB}.tar.gz
+## Remove the directories and unpack the source code
+rm -Rf ${GCC} && tar -jxvf ${GCC}.tar.bz2
+rm -Rf ${NEWLIB} && tar -zxvf ${NEWLIB}.tar.gz
 
-  ## Patch the source code if a patch file exists.
-  if [ -f ../patches/${GCC}-PS3.patch ]; then
-    echo "Patching ${GCC}"
-    cat ../patches/${GCC}-PS3.patch | patch -p1 -d ${GCC}
-  fi
-  if [ -f ../patches/${NEWLIB}-PS3.patch ]; then
-    echo "Patching ${NEWLIB}"
-    cat ../patches/${NEWLIB}-PS3.patch | patch -p1 -d ${NEWLIB}
+## Patch the source code if a patch file exists.
+if [ -f ../patches/${GCC}-PS3.patch ]; then
+  echo "Patching ${GCC}"
+  cat ../patches/${GCC}-PS3.patch | patch -p1 -d ${GCC}
   fi
 
-  ## Enter the source code directory.
-  cd ${GCC}
+if [ -f ../patches/${NEWLIB}-PS3.patch ]; then
+  echo "Patching ${NEWLIB}"
+  cat ../patches/${NEWLIB}-PS3.patch | patch -p1 -d ${NEWLIB}
+fi
 
-  ## Create the newlib symlinks.
-  ln -s ../${NEWLIB}/newlib newlib
-  ln -s ../${NEWLIB}/libgloss libgloss
+## Enter the source code directory.
+cd ${GCC}
 
-  ## Download the prerequisites.
-  ./contrib/download_prerequisites
+## Create the newlib symlinks.
+ln -s ../${NEWLIB}/newlib newlib
+ln -s ../${NEWLIB}/libgloss libgloss
 
-  ## Leave the source code directory.
-  cd ..
+## Download the prerequisites.
+./contrib/download_prerequisites
 
+## Leave the source code directory.
+cd ..
+
+## Create the build directory.
 if [ ! -d ${GCC}/build-ppu ]; then
-
-  ## Create the build directory.
   mkdir ${GCC}/build-ppu
-
 fi
 
 ## Enter the build directory.
