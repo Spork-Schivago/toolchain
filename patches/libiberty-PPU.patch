@@ -1,0 +1,11 @@
+--- binutils-2.23.2/libiberty/Makefile.in	2013-12-11 16:02:03.405428952 -0500
++++ binutils-2.23.2-PS3/libiberty/Makefile.in	2013-12-11 16:06:00.359623642 -0500
+@@ -358,7 +358,7 @@
+ 	$(INSTALL_DATA) $(TARGETLIB) $(DESTDIR)$(libdir)/$(MULTIOSDIR)/$(TARGETLIB)n
+ 	( cd $(DESTDIR)$(libdir)/$(MULTIOSDIR) ; chmod 644 $(TARGETLIB)n ;$(RANLIB) $(TARGETLIB)n )
+ 	mv -f $(DESTDIR)$(libdir)/$(MULTIOSDIR)/$(TARGETLIB)n $(DESTDIR)$(libdir)/$(MULTIOSDIR)/$(TARGETLIB)
+-	if test -n "${target_header_dir}"; then \
++	if test -n "${includedir}/${target_header_dir}"; then \
+ 	  case "${target_header_dir}" in \
+ 	    /*)    thd=${target_header_dir};; \
+ 	    *)     thd=${includedir}/${target_header_dir};; \
