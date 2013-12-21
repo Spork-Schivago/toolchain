@@ -10,7 +10,7 @@ It includes the following:
  gcc-4.8.2
  newlib-2.0.0
  gdb-7.6.1
- psl1ght-v2
+ psl1ght-v2,
  a ppu version of libiberty
  a not working so well ppu version of libbfd
  
@@ -59,10 +59,11 @@ It includes the following:
  eskiss
  elementary-1.7.9
 
-Current Issues
+current issues
 ==============
 
-There are some currently known problems.  Libbfd and libiberty weren't meant to be standalone libraries.  I needed a PPU version of libiberty to compile a PS3 program or two so I recompiled it from the binutils package as a powerpc64 library.  To get libbfd to work, you might need to add the libiberty library to the linker options.
+There are some currently known problems.  Libbfd and libiberty weren't meant to be standalone libraries.  I needed a PPU version of libiberty to compile a PS3 program or two so I recompiled it from the binutils package as a powerpc64 
+library.  To get libbfd to work, you might need to add the libiberty library to the linker options.
 
 I had trouble running the example from Wargio's NoRSX library.  It ran exteremly slow and I couldn't exit.  I can't figure out what I did wrong.  
 
@@ -72,7 +73,7 @@ I can only test this in Linux because that's all I run.  I doubt the mingw-toolc
 
 If your programs no longer compiles, the code or Makefile might need updating.  You might need to switch the order of the libraries around.  For example, for the PSChannel application, I had to modify the Makefile.  Under the LIBS section, I had to move -liberty to after -lfontconfig and I needed to add -ltiff to the end.  For the CFLAGS I needed to add -I$(PS3DEV)/portlibs/ppu/lib/libzip/include so it'd find the zipconf.h header file.  That's the correct installation location for the zipconf.h header.
 
-Installation
+installation
 ============
 
 To install:
@@ -81,9 +82,9 @@ To install:
   cd toolchain
   ./toolchain.sh
 
-If there is a package you don't want installed, A chmod -x <script name> in the script directory should prevent it from executing.  If not, simply remove the script from the directory.
+If there is a package you don't want installed, A chmod -x (script name) in the script directory should prevent it from executing.  If not, simply remove the script from the directory.
 
 Thanks
 ======
-I couldn't of gotten this far if it was not for the great people on the fontconfig, cairo, curl, and the tiff mailing list along with some of the PS3 developers answering some of my dumb questions.
+I couldn't of gotten this far if it was not for the great people on the fontconfig, cairo, curl, and the tiff mailing list along with some of the PS3 developers answering some of my dumb questions.  Thanks!
 
