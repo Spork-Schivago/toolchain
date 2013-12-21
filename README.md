@@ -1,65 +1,6 @@
 toolchain
 =========
 
-This is a beta version of a more up-to-date toolchain for the PS3 which also includes 
-the PS3Libraries (with some additions) and the Enlightenment Foundation Libraries.
-
-It includes the following:
-
- Toolchain:
- binutils-2.23.2
- gcc-4.8.2
- newlib-2.0.0
- gdb-7.6.1
- psl1ght-v2,
- a ppu version of libiberty
- a not working so well ppu version of libbfd
- 
- PS3 Libraries:
- zlib-1.2.8
- libpng-1.6.6
- jpeg-v9
- freetype-2.5.0.1
- pixman-0.32.2
- cairo-1.12.16
- libogg-1.3.1
- libvorbis-1.3.3
- libzip-0.11.1
- tiff-4.0.3
- libmikmod-3.3.3
- libxml2-2.9.1
- webp-0.3.1
- flac-1.3.0
- libmad-0.15.1b
- Zeldin's SDL1 for the psl1ght
- updated SDL1 libraries
- SDL2-2.0.1
- SDL2 libraries
- polarssl-1.3.2
- libcurl-7.33.0
- faad2-2.7
- libtheora-1.1.1
- libintl-lite-0.5
- Wargio's NoRSX-0.3.1
- libjson-0.11
- 
- EFL Libraries:
- escape
- eina-1.7.9
- eet-1.7.9
- expat-2.1.0
- fontconfig-2.11.0
- evas-1.7.9
- expedite-1.7.9
- c-ares-1.10.0
- ecore-1.7.9
- embryo-1.7.9
- lua-5.2.3
- edje-1.7.9
- chipmunk-6.2.1
- eskiss
- elementary-1.7.9
-
 current issues
 ==============
 
