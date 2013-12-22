@@ -83,13 +83,18 @@ It includes the following: <br>
   <b>installation</b> <br>
   
   To install: <br>
+   First backup your current version of the toolchain.
+   ie. mv ${PS3DEV} ${PS3DEV}.backup
+   That way if something goes wrong, you can simply rm -rf ${PS3DEV} and then mv ${PS3DEV}.backup ${PS3DEV}.
+   
    Clone the repository and run ./toolchain.sh in the directory it creates.
    git clone git://github.com/Spork-Schivago/toolchain
    cd toolchain
    ./toolchain.sh
    
    If there is a package you don't want installed, a chmod -x (script name) in the script directory should prevent it
-   from executing.  If not, simply remove the script from the directory.
+   from executing.  If not, simply remove the script from the directory.  If there's anything you want added, let me 
+   know.
    
    <b>Thanks</b> <br>
    I couldn't of gotten this far if it was not for the great people on the fontconfig, cairo, curl, and the tiff
