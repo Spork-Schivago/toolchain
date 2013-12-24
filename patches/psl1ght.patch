@@ -1,6 +1,6 @@
 diff -burN psl1ght/ppu/sprx/libnet/socket.c psl1ght-PS3/ppu/sprx/libnet/socket.c
 --- psl1ght/ppu/sprx/libnet/socket.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/sprx/libnet/socket.c	2013-12-24 00:32:47.779682856 -0500
++++ psl1ght-PS3/ppu/sprx/libnet/socket.c	2013-12-24 03:05:12.734578245 -0500
 @@ -457,10901 +457,10901 @@
  
  static struct pvt_servent IANAports[] = {
@@ -21795,3 +21795,40 @@ diff -burN psl1ght/ppu/sprx/libnet/socket.c psl1ght-PS3/ppu/sprx/libnet/socket.c
  };
  
  struct servent *
+diff -burN psl1ght/samples/graphics/cairo/Makefile psl1ght-PS3/samples/graphics/cairo/Makefile
+--- psl1ght/samples/graphics/cairo/Makefile	2013-01-07 17:10:43.000000000 -0500
++++ psl1ght-PS3/samples/graphics/cairo/Makefile	2013-12-24 03:05:12.736578220 -0500
+@@ -37,7 +37,7 @@
+ #---------------------------------------------------------------------------------
+ # any extra libraries we wish to link with the project
+ #---------------------------------------------------------------------------------
+-LIBS	:=	-lgcm_sys -lrsx -lsysutil -lio -lcairo -lm -lfreetype -lz -lpixman-1 -lrt -llv2
++LIBS	:=	-lgcm_sys -lrsx -lsysutil -lio -lcairo -lfreetype -lpng -lz -lpixman-1 -lm -lrt -llv2
+ 
+ #---------------------------------------------------------------------------------
+ # list of directories containing libraries, this must be the top level containing
+diff -burN psl1ght/samples/graphics/rsxtest_spu/Makefile psl1ght-PS3/samples/graphics/rsxtest_spu/Makefile
+--- psl1ght/samples/graphics/rsxtest_spu/Makefile	2013-01-07 17:10:43.000000000 -0500
++++ psl1ght-PS3/samples/graphics/rsxtest_spu/Makefile	2013-12-24 03:05:38.047270786 -0500
+@@ -70,7 +70,8 @@
+ CPPFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
+ sFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.s)))
+ SFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.S)))
+-BINFILES	:=	$(foreach dir,$(DATA),$(notdir $(wildcard $(dir)/*.*)))
++BINFILES	:=	$(foreach dir,$(DATA),$(notdir $(wildcard $(dir)/*.*))) \
++			spu.bin
+ VCGFILES	:=	$(foreach dir,$(SHADERS),$(notdir $(wildcard $(dir)/*.vcg)))
+ FCGFILES	:=	$(foreach dir,$(SHADERS),$(notdir $(wildcard $(dir)/*.fcg)))
+ 
+diff -burN psl1ght/samples/network/ps3load/Makefile psl1ght-PS3/samples/network/ps3load/Makefile
+--- psl1ght/samples/network/ps3load/Makefile	2013-01-07 17:10:43.000000000 -0500
++++ psl1ght-PS3/samples/network/ps3load/Makefile	2013-12-24 03:05:12.737578208 -0500
+@@ -89,7 +89,7 @@
+ export INCLUDE	:=	$(foreach dir,$(INCLUDES), -I$(CURDIR)/$(dir)) \
+ 					$(foreach dir,$(LIBDIRS),-I$(dir)/include) \
+ 					$(LIBPSL1GHT_INC) \
+-					-I$(CURDIR)/$(BUILD)
++					-I$(CURDIR)/$(BUILD) -I$(PS3DEV)/portlibs/ppu/lib/libzip/include
+ 
+ #---------------------------------------------------------------------------------
+ # build a list of library paths
