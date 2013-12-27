@@ -1,0 +1,53 @@
+  <b>Toolchain</b> <br>
+  binutils-2.23.2 <br>
+  gcc-4.8.2 <br>
+  newlib-2.0.0 <br>
+  gdb-7.6.1 <br>
+  psl1ght-v2 <br>
+  a ppu version of libiberty <br>
+  a not working so well ppu version of libbfd <br>
+
+  <b>PS3 Libraries:</b> <br>
+  zlib-1.2.8 <br>
+  libpng-1.6.6 <br>
+  jpeg-v9 <br>
+  freetype-2.5.0.1 <br>
+  pixman-0.32.2 <br>
+  cairo-1.12.16 <br>
+  libogg-1.3.1 <br>
+  libvorbis-1.3.3 <br>
+  libzip-0.11.1 <br>
+  tiff-4.0.3 <br>
+  libmikmod-3.3.3 <br>
+  libxml2-2.9.1 <br>
+  webp-0.3.1 <br>
+  flac-1.3.0 <br>
+  libmad-0.15.1b <br>
+  Zeldin's SDL1 for the psl1ght <br>
+  updated SDL1 libraries <br>
+  SDL2-2.0.1 <br>
+  SDL2 libraries <br>
+  polarssl-1.3.2 <br>
+  libcurl-7.33.0 <br>
+  faad2-2.7 <br>
+  libtheora-1.1.1 <br>
+  libintl-lite-0.5 <br>
+  Wargio's NoRSX-0.3.1 <br>
+  libjson-0.11 <br>
+
+  <b>EFL Libraries:</b> <br>
+  escape <br>
+  eina-1.7.9 <br>
+  eet-1.7.9 <br>
+  expat-2.1.0 <br>
+  fontconfig-2.11.0 <br>
+  evas-1.7.9 <br>
+  expedite-1.7.9 <br>
+  c-ares-1.10.0 <br>
+  ecore-1.7.9 <br>
+  embryo-1.7.9 <br>
+  lua-5.2.3 <br>
+  edje-1.7.9 <br>
+  chipmunk-6.2.1 <br>
+  eskiss <br>
+  elementary-1.7.9 <br>

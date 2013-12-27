@@ -1,0 +1,15 @@
+The current status of the toolchain and libraries  is ALPHA.
+I have compiled and ran the samples in the psl1ght samples directory
+and they all appear to work.
+
+Neither of the games from the PS3 version of the Enlightenment Foundation Library
+seem to work.  I am looking into this.
+
+I have currently only tried one homebrew program outside of the samples provided and
+it failed.  It does depend on the ps3efl library.  Once I figure the problems out
+with EFL, I have a feeling the homebrew will work.
+
+If anyone finds some homebrew that compiles and runs successfully, please e-mail
+me at nacho2874@yahoo.com to let me know.  Thank you.
+
+-- Spork Schivago
