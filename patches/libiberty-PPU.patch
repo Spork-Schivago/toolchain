@@ -1,11 +1,12 @@
---- binutils-2.23.2/libiberty/Makefile.in	2013-12-11 16:02:03.405428952 -0500
-+++ binutils-2.23.2-PS3/libiberty/Makefile.in	2013-12-11 16:06:00.359623642 -0500
-@@ -358,7 +358,7 @@
- 	$(INSTALL_DATA) $(TARGETLIB) $(DESTDIR)$(libdir)/$(MULTIOSDIR)/$(TARGETLIB)n
- 	( cd $(DESTDIR)$(libdir)/$(MULTIOSDIR) ; chmod 644 $(TARGETLIB)n ;$(RANLIB) $(TARGETLIB)n )
- 	mv -f $(DESTDIR)$(libdir)/$(MULTIOSDIR)/$(TARGETLIB)n $(DESTDIR)$(libdir)/$(MULTIOSDIR)/$(TARGETLIB)
+diff -burN binutils-2.24/libiberty/Makefile.in binutils-2.24-PS3/libiberty/Makefile.in
+--- binutils-2.24/libiberty/Makefile.in	2013-11-04 10:33:40.000000000 -0500
++++ binutils-2.24-PS3/libiberty/Makefile.in	2014-01-31 18:53:28.715294851 -0500
+@@ -355,7 +355,7 @@
+ # since it will be passed the multilib flags.
+ MULTIOSDIR = `$(CC) $(CFLAGS) -print-multi-os-directory`
+ install_to_libdir: all
 -	if test -n "${target_header_dir}"; then \
 +	if test -n "${includedir}/${target_header_dir}"; then \
- 	  case "${target_header_dir}" in \
- 	    /*)    thd=${target_header_dir};; \
- 	    *)     thd=${includedir}/${target_header_dir};; \
+ 		${mkinstalldirs} $(DESTDIR)$(libdir)/$(MULTIOSDIR); \
+ 		$(INSTALL_DATA) $(TARGETLIB) $(DESTDIR)$(libdir)/$(MULTIOSDIR)/$(TARGETLIB)n; \
+ 		( cd $(DESTDIR)$(libdir)/$(MULTIOSDIR) ; chmod 644 $(TARGETLIB)n ;$(RANLIB) $(TARGETLIB)n ); \

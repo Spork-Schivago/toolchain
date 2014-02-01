@@ -1,7 +1,7 @@
 #!/bin/sh -e
 # libiberty-PPU.sh by Spork Schivago (Spork@stny.rr.com)
 
-BINUTILS="binutils-2.23.2"
+BINUTILS="binutils-2.24"
 LIBIBERTY="libiberty"
 
 ## Remove the libiberty-PPU directory

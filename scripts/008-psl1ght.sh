@@ -10,7 +10,14 @@ fi
 ## Unpack the source code.
 rm -Rf ${PSL1GHT_SDK} && mkdir ${PSL1GHT_SDK} && tar --strip-components=1 --directory=${PSL1GHT_SDK} -zxvf ${PSL1GHT_SDK}.tar.gz
 
-## Create the build directory.
+## Patch the source code if a patch file exists.
+if [ -f ../patches/${PSL1GHT_SDK}.patch ]; then
+  echo "Patching ${PSL1GHT_SDK}"
+  cat ../patches/${PSL1GHT_SDK}.patch | patch -p1 -d ${PSL1GHT_SDK}
+fi
+
+
+## Change to the build directory.
 cd ${PSL1GHT_SDK}
 
 ## Compile and install.

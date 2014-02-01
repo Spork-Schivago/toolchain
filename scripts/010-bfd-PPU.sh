@@ -1,7 +1,7 @@
 #!/bin/sh -e
 # bfd-PPU.sh by Spork Schivago (Spork@stny.rr.com)
 
-BINUTILS="binutils-2.23.2"
+BINUTILS="binutils-2.24"
 BFD="BFD"
 
 ## Remove the BFD-PPU directory

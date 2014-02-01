@@ -1,7 +1,7 @@
 #!/bin/sh -e
 # binutils-SPU.sh by Dan Peori (dan.peori@oopo.net)
 
-BINUTILS="binutils-2.23.2"
+BINUTILS="binutils-2.24"
 
 if [ ! -d ${BINUTILS} ]; then
   ## Download the source code.
