@@ -22,7 +22,7 @@ cd ${BINUTILS}/build-ppu/${BFD}-PPU
 ## Configure BFD for PPU
 ../../bfd/configure \
 --cache-file=./config.cache --with-gnu-as --with-gnu-ld --with-system-zlib \
---prefix=${PS3DEV}/ppu --disable-nls --disable-shared --disable-debug \
+--prefix=${PSL1GHT}/ppu --disable-nls --disable-shared --disable-debug \
 --disable-dependency-tracking --disable-werror --enable-64-bit-bfd \
 --program-transform-name=s\&^\&powerpc64-ps3-elf-\& --disable-option-checking \
 --host=powerpc64-ps3-elf --target=powerpc64-ps3-elf --srcdir=../../bfd
