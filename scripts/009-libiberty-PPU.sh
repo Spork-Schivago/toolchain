@@ -22,7 +22,7 @@ cd ${BINUTILS}/build-ppu/${LIBIBERTY}-PPU
 
 ## Configure libiberty for PPU
 ../../libiberty/configure --cache-file=./config.cache --with-gnu-as \
---enable-install-libiberty --with-gnu-ld --with-system-zlib --prefix="${PS3DEV}/ppu" \
+--enable-install-libiberty --with-gnu-ld --with-system-zlib --prefix="${PS3DEV}/portlibs/ppu" \
 --disable-nls --disable-shared --disable-debug --disable-dependency-tracking \
 --disable-werror --enable-64-bit-bfd --with-gcc --with-gnu-as --with-gnu-ld \
 --program-transform-name=s\&^\&powerpc64-ps3-elf-\& --disable-option-checking \
