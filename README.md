@@ -27,20 +27,20 @@ Have a look at **PACKAGES** to see what's included and check out **STATUS** to t
 
   **Installation**  
    First backup your current version of the toolchain (if it exists).  
-    mv ${PS3DEV} ${PS3DEV}.backup  
+   ```mv ${PS3DEV} ${PS3DEV}.backup```  
    That way if something goes wrong, you can simply rm -rf ${PS3DEV} and then mv ${PS3DEV}.backup ${PS3DEV}.  
 
    Setup your environmental variables.  
-    nano -w ~/.bashrc (or use your favourite text editor)
-    export PS3DEV=/usr/local/ps3dev  
-    export PSL1GHT=$PS3DEV/psl1ght  
-    export PATH=$PATH:$PS3DEV/bin:$PS3DEV/host/ppu/bin:$PS3DEV/host/spu/bin:$PSL1GHT/host/  
+  ```nano -w ~/.bashrc (or use your favourite text editor)  
+  export PS3DEV=/usr/local/ps3dev  
+  export PSL1GHT=$PS3DEV/psl1ght  
+  export PATH=$PATH:$PS3DEV/bin:$PS3DEV/host/ppu/bin:$PS3DEV/host/spu/bin:$PSL1GHT/host/```
    Save the file, logout and log back in.
 
-   Clone the repository and execute toolchain.sh
-    git clone git://github.com/Spork-Schivago/toolchain  
-    cd toolchain  
-    ./toolchain.sh  
+   Clone the repository and execute toolchain.sh  
+  ```git clone git://github.com/Spork-Schivago/toolchain  
+  cd toolchain  
+  ./toolchain.sh```
   
   If there is a package you don't want installed, a chmod -x (script name) in the script directory should prevent it
   from executing.  If not, simply remove the script from the directory.  Certain packages depend on other packages
