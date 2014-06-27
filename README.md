@@ -36,7 +36,7 @@ Have a look at **PACKAGES** to see what's included and check out **STATUS** to t
     nano -w ~/.bashrc  
     export PS3DEV=/usr/local/ps3dev  
     export PSL1GHT=$PS3DEV/psl1ght  
-    export PATH=$PATH:$PS3DEV/bin:$PS3DEV/host/ppu/bin:$PS3DEV/host/spu/bin:$PSL1GHT/host/
+    export PATH=$PATH:$PS3DEV/bin:$PS3DEV/ppu/bin:$PS3DEV/spu/bin:$PSL1GHT
    Save the file, logout and log back in.
 
    Clone the repository and execute toolchain.sh
