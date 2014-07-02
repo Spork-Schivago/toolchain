@@ -3,7 +3,8 @@
 
 PS3LIBS="PS3Libraries"
 
-## Clone the source code from our github repository
+## Remove the directory and clone the source code from our github repository
+rm -rf ${PS3LIBS}
 git clone https://github.com/Spork-Schivago/${PS3LIBS}
 
 ## Create the build directory.
