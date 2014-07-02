@@ -1,7 +1,7 @@
 #!/bin/sh -e
 # gdb-SPU.sh by Dan Peori (dan.peori@oopo.net)
 
-GDB="gdb-7.6.1"
+GDB="gdb-7.7.1"
 
 if [ ! -d ${GDB} ]; then
   ## Download the source code.
