@@ -1,8 +1,8 @@
 #!/bin/sh -e
 # gcc-newlib-PPU.sh by Dan Peori (dan.peori@oopo.net)
 
-GCC="gcc-4.8.2"
-NEWLIB="newlib-2.0.0"
+GCC="gcc-4.9.0"
+NEWLIB="newlib-2.1.0"
 
 ## Download the source code.
 if [ ! -f ${GCC}.tar.bz2 ]; then wget --continue ftp://ftp.gnu.org/gnu/gcc/${GCC}/${GCC}.tar.bz2; fi
