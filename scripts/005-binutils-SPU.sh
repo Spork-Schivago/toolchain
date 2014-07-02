@@ -11,8 +11,8 @@ if [ ! -d ${BINUTILS} ]; then
   tar -jxvf ${BINUTILS}.tar.bz2
 
   ## Patch the source code if a patch file exists.
-  if [ -f ../patches/${BINUTILS}-PS3.patch ]; then
-    cat ../patches/${BINUTILS}-PS3.patch | patch -p1 -d ${BINUTILS}
+  if [ -f ../patches/${BINUTILS}-SPU-PS3.patch ]; then
+    cat ../patches/${BINUTILS}-SPU-PS3.patch | patch -p1 -d ${BINUTILS}
   fi
 fi
 
