@@ -23,7 +23,7 @@ ask_permission()
 {
 	if [ $DO_SET_EXPORTS -ne 0 ]; then
 		if [ $HAS_ANSWERED -ne 1 ]; then
-			echo -e "\E[1;31mWARNING:\E[0m\E[1m If you continue, his script will modify your global profile!\E[0m"
+			echo -e "\E[1;31mWARNING:\E[0m\E[1m If you continue, this script will modify your global profile!\E[0m"
 			echo
 			echo The purpose of this change is to add export paths to your profile.
 			echo To undo this, edit /etc/profile and removing these lines from the bottom:
