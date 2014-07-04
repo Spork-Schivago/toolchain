@@ -1,6 +1,6 @@
 diff -burN psl1ght/common/libsimdmath/common/simdmath/_sincos.h psl1ght-PS3/common/libsimdmath/common/simdmath/_sincos.h
 --- psl1ght/common/libsimdmath/common/simdmath/_sincos.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/common/simdmath/_sincos.h	2014-06-27 22:15:26.985300087 -0400
++++ psl1ght-PS3/common/libsimdmath/common/simdmath/_sincos.h	2014-07-04 16:38:29.149078078 -0400
 @@ -30,9 +30,10 @@
  #ifndef ___SIMD_MATH__SINCOS_H___
  #define ___SIMD_MATH__SINCOS_H___
@@ -45,7 +45,7 @@ diff -burN psl1ght/common/libsimdmath/common/simdmath/_sincos.h psl1ght-PS3/comm
  #define __SINCOSF_R3 -0.1980741872e-3f
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_acosf4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_acosf4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_acosf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_acosf4.h	2014-06-27 22:15:26.986300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_acosf4.h	2014-07-04 16:38:29.150078078 -0400
 @@ -35,9 +35,9 @@
  
  #include <simdmath/_sqrtf4.h>
@@ -61,7 +61,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_acosf4.h psl1ght-PS3/common/
  {
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_asinf4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_asinf4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_asinf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_asinf4.h	2014-06-27 22:15:26.986300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_asinf4.h	2014-07-04 16:38:29.150078078 -0400
 @@ -39,53 +39,53 @@
  static inline vector float
  _asinf4 (vector float x)
@@ -141,7 +141,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_asinf4.h psl1ght-PS3/common/
  
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_atan2f4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_atan2f4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_atan2f4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_atan2f4.h	2014-06-27 22:15:26.987300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_atan2f4.h	2014-07-04 16:38:29.150078078 -0400
 @@ -35,21 +35,22 @@
  
  #include <simdmath/_atanf4.h>
@@ -177,7 +177,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_atan2f4.h psl1ght-PS3/common
  
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_atanf4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_atanf4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_atanf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_atanf4.h	2014-06-27 22:15:26.987300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_atanf4.h	2014-07-04 16:38:29.151078078 -0400
 @@ -35,9 +35,10 @@
  
  #include <simdmath/_recipf4.h>
@@ -194,7 +194,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_atanf4.h psl1ght-PS3/common/
  {
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_cbrtf4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_cbrtf4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_cbrtf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_cbrtf4.h	2014-06-27 22:15:26.987300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_cbrtf4.h	2014-07-04 16:38:29.151078078 -0400
 @@ -57,8 +57,8 @@
    return quot;
  }
@@ -217,7 +217,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_cbrtf4.h psl1ght-PS3/common/
    factor = vec_sel(factor, __vec_splatsf4(1.0/__CBRTF_cbrt2), vec_cmpeq(modval, __vec_splatsi4(-1)));
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_cosf4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_cosf4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_cosf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_cosf4.h	2014-06-27 22:15:26.988300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_cosf4.h	2014-07-04 16:38:29.152078078 -0400
 @@ -37,48 +37,51 @@
  #include <simdmath/_vec_utils.h>
  
@@ -314,7 +314,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_cosf4.h psl1ght-PS3/common/l
    res = vec_sel((vector float)vec_xor(__vec_splatsu4(0x80000000U), (vector unsigned int)res), res, mask2);
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_divf4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_divf4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_divf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_divf4.h	2014-06-27 22:15:26.988300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_divf4.h	2014-07-04 16:38:29.152078078 -0400
 @@ -39,7 +39,7 @@
  static inline vector float
  _divf4 (vector float numer, vector float denom)
@@ -326,7 +326,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_divf4.h psl1ght-PS3/common/l
  
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_divi4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_divi4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_divi4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_divi4.h	2014-06-27 22:15:26.988300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_divi4.h	2014-07-04 16:38:29.152078078 -0400
 @@ -35,8 +35,9 @@
  
  #include <simdmath/_vec_utils.h>
@@ -372,7 +372,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_divi4.h psl1ght-PS3/common/l
     
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_exp2f4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_exp2f4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_exp2f4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_exp2f4.h	2014-06-27 22:15:26.989300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_exp2f4.h	2014-07-04 16:38:29.153078079 -0400
 @@ -75,8 +75,8 @@
   *    this range will produce undefined results.
   */
@@ -411,7 +411,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_exp2f4.h psl1ght-PS3/common/
    result = vec_sel(result, __vec_splatsf4(HUGE_VALF), overflow); 
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_fmodf4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_fmodf4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_fmodf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_fmodf4.h	2014-06-27 22:15:26.989300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_fmodf4.h	2014-07-04 16:38:29.153078079 -0400
 @@ -37,30 +37,34 @@
  #include <simdmath/_fabsf4.h>
  #include <simdmath/_copysignf4.h>
@@ -468,7 +468,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_fmodf4.h psl1ght-PS3/common/
    r2 = vec_nmsub( i2, yabs, xabs );
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_modff4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_modff4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_modff4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_modff4.h	2014-06-27 22:15:26.990300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_modff4.h	2014-07-04 16:38:29.154078079 -0400
 @@ -35,8 +35,9 @@
  
  #include <simdmath/_truncf4.h>
@@ -483,7 +483,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_modff4.h psl1ght-PS3/common/
  _modff4 (vector float x, vector float *iptr)
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_recipf4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_recipf4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_recipf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_recipf4.h	2014-06-27 22:15:26.990300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_recipf4.h	2014-07-04 16:38:29.154078079 -0400
 @@ -38,7 +38,7 @@
  static inline vector float
  _recipf4 (vector float x)
@@ -495,7 +495,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_recipf4.h psl1ght-PS3/common
    vector float ones = __vec_splatsf4(1.0f);
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_rsqrtf4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_rsqrtf4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_rsqrtf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_rsqrtf4.h	2014-06-27 22:15:26.990300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_rsqrtf4.h	2014-07-04 16:38:29.154078079 -0400
 @@ -35,13 +35,14 @@
  
  #include <simdmath/_vec_utils.h>
@@ -516,7 +516,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_rsqrtf4.h psl1ght-PS3/common
    vector float half = __vec_splatsf4(0.5f);
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_sincosf4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_sincosf4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_sincosf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_sincosf4.h	2014-06-27 22:15:26.991300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_sincosf4.h	2014-07-04 16:38:29.155078079 -0400
 @@ -36,10 +36,11 @@
  #include <simdmath/_sincos.h>
  #include <simdmath/_vec_utils.h>
@@ -621,7 +621,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_sincosf4.h psl1ght-PS3/commo
      
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_sinf4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_sinf4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_sinf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_sinf4.h	2014-06-27 22:15:26.991300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_sinf4.h	2014-07-04 16:38:29.155078079 -0400
 @@ -35,10 +35,10 @@
  
  #include <simdmath/_sincos.h>
@@ -719,7 +719,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_sinf4.h psl1ght-PS3/common/l
    res = vec_sel((vector float)vec_xor(__vec_splatsu4(0x80000000U),(vector unsigned int)res),res,mask2);
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_sqrtf4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_sqrtf4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_sqrtf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_sqrtf4.h	2014-06-27 22:15:26.992300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_sqrtf4.h	2014-07-04 16:38:29.156078079 -0400
 @@ -35,13 +35,14 @@
  
  #include <simdmath/_vec_utils.h>
@@ -740,7 +740,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_sqrtf4.h psl1ght-PS3/common/
    vector float half = __vec_splatsf4(0.5f);
 diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_tanf4.h psl1ght-PS3/common/libsimdmath/ppu/simdmath/_tanf4.h
 --- psl1ght/common/libsimdmath/ppu/simdmath/_tanf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_tanf4.h	2014-06-27 22:15:26.992300087 -0400
++++ psl1ght-PS3/common/libsimdmath/ppu/simdmath/_tanf4.h	2014-07-04 16:38:29.156078079 -0400
 @@ -36,58 +36,62 @@
  #include <simdmath/_sincos.h>
  #include <simdmath/_divf4.h>
@@ -828,7 +828,7 @@ diff -burN psl1ght/common/libsimdmath/ppu/simdmath/_tanf4.h psl1ght-PS3/common/l
    res = vec_sel(ncxosx,sxocx,mask);
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_acosf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_acosf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_acosf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_acosf4.h	2014-06-27 22:15:26.992300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_acosf4.h	2014-07-04 16:38:29.157078079 -0400
 @@ -35,9 +35,10 @@
  
  #include <simdmath/_sqrtf4.h>
@@ -845,7 +845,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_acosf4.h psl1ght-PS3/common/
  {
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_asinf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_asinf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_asinf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_asinf4.h	2014-06-27 22:15:26.993300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_asinf4.h	2014-07-04 16:38:29.157078079 -0400
 @@ -39,51 +39,51 @@
  static inline vector float
  _asinf4 (vector float x)
@@ -923,7 +923,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_asinf4.h psl1ght-PS3/common/
    return x;
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_atan2f4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_atan2f4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_atan2f4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_atan2f4.h	2014-06-27 22:15:26.993300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_atan2f4.h	2014-07-04 16:38:29.158078079 -0400
 @@ -36,21 +36,22 @@
  #include <simdmath/_atanf4.h>
  #include <simdmath/_divf4.h>
@@ -959,7 +959,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_atan2f4.h psl1ght-PS3/common
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_atanf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_atanf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_atanf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_atanf4.h	2014-06-27 22:15:26.994300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_atanf4.h	2014-07-04 16:38:29.158078079 -0400
 @@ -35,9 +35,10 @@
  
  #include <simdmath/_recipf4.h>
@@ -976,7 +976,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_atanf4.h psl1ght-PS3/common/
  {
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_cbrtf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_cbrtf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_cbrtf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_cbrtf4.h	2014-06-27 22:15:26.994300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_cbrtf4.h	2014-07-04 16:38:29.158078079 -0400
 @@ -53,8 +53,8 @@
    return quot;
  }
@@ -999,7 +999,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_cbrtf4.h psl1ght-PS3/common/
    factor = spu_sel(factor, spu_splats((float)(      1.0)), spu_cmpeq(modval, 0));
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_ceild2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_ceild2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_ceild2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_ceild2.h	2014-06-27 22:15:26.994300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_ceild2.h	2014-07-04 16:38:29.159078079 -0400
 @@ -73,7 +73,8 @@
     */
    mask_1 = spu_addx(mask, one, spu_rlqwbyte(spu_genc(mask, one), 4));
@@ -1022,7 +1022,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_ceild2.h psl1ght-PS3/common/
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_ceilf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_ceilf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_ceilf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_ceilf4.h	2014-06-27 22:15:26.995300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_ceilf4.h	2014-07-04 16:38:29.159078079 -0400
 @@ -40,7 +40,7 @@
    vec_uint4  inrange;
    vec_float4 truncated, truncated1;
@@ -1043,7 +1043,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_ceilf4.h psl1ght-PS3/common/
  }
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_divd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_divd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_divd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_divd2.h	2014-06-27 22:15:26.995300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_divd2.h	2014-07-04 16:38:29.159078079 -0400
 @@ -30,8 +30,9 @@
  #ifndef ___SIMD_MATH_DIVD2_H___
  #define ___SIMD_MATH_DIVD2_H___
@@ -1058,7 +1058,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_divd2.h psl1ght-PS3/common/l
  #include <spu_intrinsics.h>
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_divf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_divf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_divf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_divf4.h	2014-06-27 22:15:26.996300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_divf4.h	2014-07-04 16:38:29.159078079 -0400
 @@ -36,8 +36,9 @@
  static inline vector float
  _divf4 (vector float numer, vector float denom)
@@ -1073,7 +1073,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_divf4.h psl1ght-PS3/common/l
    vector float oneish = (vector float)spu_splats(0x3f800001);
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_divi4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_divi4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_divi4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_divi4.h	2014-06-27 22:15:26.996300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_divi4.h	2014-07-04 16:38:29.160078079 -0400
 @@ -35,8 +35,9 @@
  
  #include <simdmath/_divu4.h>
@@ -1104,7 +1104,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_divi4.h psl1ght-PS3/common/l
    denomAbs = (vec_uint4)spu_sel( spu_sub( 0, denom ), denom, denomPos );
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_divu4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_divu4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_divu4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_divu4.h	2014-06-27 22:15:26.996300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_divu4.h	2014-07-04 16:38:29.160078079 -0400
 @@ -33,8 +33,9 @@
  #include <simdmath.h>
  #include <spu_intrinsics.h>
@@ -1167,7 +1167,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_divu4.h psl1ght-PS3/common/l
        shift = (vec_int4)spu_sub( skip, numerZeros );
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_exp2f4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_exp2f4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_exp2f4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_exp2f4.h	2014-06-27 22:15:26.997300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_exp2f4.h	2014-07-04 16:38:29.160078079 -0400
 @@ -95,15 +95,16 @@
    frac = spu_sub(spu_convtf(ix, 0), x);
    frac = spu_mul(frac, spu_splats(__EXP2F_LN2));
@@ -1203,7 +1203,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_exp2f4.h psl1ght-PS3/common/
  }
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_floord2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_floord2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_floord2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_floord2.h	2014-06-27 22:15:26.997300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_floord2.h	2014-07-04 16:38:29.161078079 -0400
 @@ -73,7 +73,8 @@
     */
    mask_1 = spu_addx(mask, one, spu_rlqwbyte(spu_genc(mask, one), 4));
@@ -1225,7 +1225,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_floord2.h psl1ght-PS3/common
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_floorf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_floorf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_floorf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_floorf4.h	2014-06-27 22:15:26.998300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_floorf4.h	2014-07-04 16:38:29.161078079 -0400
 @@ -40,7 +40,7 @@
    vec_uint4  inrange;
    vec_float4 truncated, truncated1;
@@ -1246,7 +1246,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_floorf4.h psl1ght-PS3/common
  }
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_fmodd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_fmodd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_fmodd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_fmodd2.h	2014-06-27 22:15:26.998300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_fmodd2.h	2014-07-04 16:38:29.162078079 -0400
 @@ -82,10 +82,10 @@
    exp_x  = spu_rlmask(x_hi, -20);
    exp_y  = spu_rlmask(y_hi, -20);
@@ -1404,7 +1404,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_fmodd2.h psl1ght-PS3/common/
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_fmodf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_fmodf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_fmodf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_fmodf4.h	2014-06-27 22:15:26.999300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_fmodf4.h	2014-07-04 16:38:29.162078079 -0400
 @@ -37,10 +37,11 @@
  #include <simdmath/_fabsf4.h>
  #include <simdmath/_copysignf4.h>
@@ -1458,7 +1458,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_fmodf4.h psl1ght-PS3/common/
    r2 = spu_nmsub( i2, yabs, xabs2 );
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_fpclassifyd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_fpclassifyd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_fpclassifyd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_fpclassifyd2.h	2014-06-27 22:15:26.999300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_fpclassifyd2.h	2014-07-04 16:38:29.162078079 -0400
 @@ -50,10 +50,10 @@
    vec_llong2 classtype;
    vec_uint4 cmpgt, cmpeq;
@@ -1494,7 +1494,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_fpclassifyd2.h psl1ght-PS3/c
    mask = (vec_ullong2)spu_and( spu_shuffle( cmpeq, cmpeq, even ), 
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_fpclassifyf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_fpclassifyf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_fpclassifyf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_fpclassifyf4.h	2014-06-27 22:15:27.000300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_fpclassifyf4.h	2014-07-04 16:38:29.163078079 -0400
 @@ -43,22 +43,22 @@
    vec_uint4 unclassified = spu_splats((unsigned int)0xffffffff);
    vec_int4 classtype = (vec_int4)zero;
@@ -1525,7 +1525,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_fpclassifyf4.h psl1ght-PS3/c
    return classtype;
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_frexpd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_frexpd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_frexpd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_frexpd2.h	2014-06-27 22:15:27.000300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_frexpd2.h	2014-07-04 16:38:29.163078079 -0400
 @@ -54,27 +54,27 @@
    vec_int4 lz, lz0, sh, ex;
    vec_double2 fr, frac = (vec_double2)zero;
@@ -1561,7 +1561,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_frexpd2.h psl1ght-PS3/common
    sh = spu_sel( (vec_int4)zero, spu_sub( lz0, spu_splats((int)11) ), spu_cmpgt( lz0, (int)11 ) );
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_ilogbd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_ilogbd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_ilogbd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_ilogbd2.h	2014-06-27 22:15:27.001300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_ilogbd2.h	2014-07-04 16:38:29.163078079 -0400
 @@ -52,7 +52,7 @@
    vec_uint4 cmpgt, cmpeq, cmpzr;
    vec_int4 lz, lz0, lz1;
@@ -1589,7 +1589,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_ilogbd2.h psl1ght-PS3/common
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_isfinited2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_isfinited2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_isfinited2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_isfinited2.h	2014-06-27 22:15:27.001300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_isfinited2.h	2014-07-04 16:38:29.164078079 -0400
 @@ -40,7 +40,7 @@
    vec_ullong2 expn = spu_splats(0x7ff0000000000000ull);
    vec_ullong2 cmpr;
@@ -1601,7 +1601,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_isfinited2.h psl1ght-PS3/com
    cmpr = spu_shuffle( cmpr, cmpr, even);
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_isfinitef4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_isfinitef4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_isfinitef4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_isfinitef4.h	2014-06-27 22:15:27.001300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_isfinitef4.h	2014-07-04 16:38:29.164078079 -0400
 @@ -38,7 +38,7 @@
  {
    (void)x;
@@ -1613,7 +1613,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_isfinitef4.h psl1ght-PS3/com
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_isinff4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_isinff4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_isinff4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_isinff4.h	2014-06-27 22:15:27.002300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_isinff4.h	2014-07-04 16:38:29.164078079 -0400
 @@ -38,7 +38,7 @@
  {   
    (void)x;
@@ -1625,7 +1625,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_isinff4.h psl1ght-PS3/common
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_isnanf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_isnanf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_isnanf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_isnanf4.h	2014-06-27 22:15:27.002300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_isnanf4.h	2014-07-04 16:38:29.165078079 -0400
 @@ -38,7 +38,7 @@
  {   
    (void)x;
@@ -1637,7 +1637,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_isnanf4.h psl1ght-PS3/common
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_isnormald2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_isnormald2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_isnormald2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_isnormald2.h	2014-06-27 22:15:27.002300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_isnormald2.h	2014-07-04 16:38:29.165078079 -0400
 @@ -40,9 +40,9 @@
    vec_ullong2 expn = spu_splats(0x7ff0000000000000ull);
    vec_ullong2 cmpr;
@@ -1652,7 +1652,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_isnormald2.h psl1ght-PS3/com
    cmpr = spu_shuffle( cmpr, cmpr, even);
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_isnormalf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_isnormalf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_isnormalf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_isnormalf4.h	2014-06-27 22:15:27.003300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_isnormalf4.h	2014-07-04 16:38:29.165078079 -0400
 @@ -36,7 +36,7 @@
  static inline vector unsigned int
  _isnormalf4 (vector float x)
@@ -1664,7 +1664,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_isnormalf4.h psl1ght-PS3/com
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_isunorderedd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_isunorderedd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_isunorderedd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_isunorderedd2.h	2014-06-27 22:15:27.003300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_isunorderedd2.h	2014-07-04 16:38:29.165078079 -0400
 @@ -43,7 +43,7 @@
    vec_ullong2 expn = (vec_ullong2)spu_splats(0xfff0000000000000ull);
    vec_ullong2 sign = (vec_ullong2)spu_splats(0x8000000000000000ull);
@@ -1685,7 +1685,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_isunorderedd2.h psl1ght-PS3/
    cmpeq = (vec_ullong2)spu_cmpeq( (vec_uint4)neg, (vec_uint4)expn );
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_isunorderedf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_isunorderedf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_isunorderedf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_isunorderedf4.h	2014-06-27 22:15:27.004300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_isunorderedf4.h	2014-07-04 16:38:29.166078079 -0400
 @@ -39,7 +39,7 @@
    (void)x;
    (void)y;
@@ -1697,7 +1697,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_isunorderedf4.h psl1ght-PS3/
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_ldexpd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_ldexpd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_ldexpd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_ldexpd2.h	2014-06-27 22:15:27.004300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_ldexpd2.h	2014-07-04 16:38:29.166078079 -0400
 @@ -40,9 +40,9 @@
  {
    vec_int4 e1, e2;
@@ -1934,7 +1934,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_ldexpd2.h psl1ght-PS3/common
    out = (vec_double2)spu_sel((vec_uint4)out , (vec_uint4)in, is_inf);
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_ldexpf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_ldexpf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_ldexpf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_ldexpf4.h	2014-06-27 22:15:27.005300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_ldexpf4.h	2014-07-04 16:38:29.167078079 -0400
 @@ -54,7 +54,7 @@
  
    x = spu_sel(x, (vec_float4)spu_sl(esum,23), expmask);
@@ -1946,7 +1946,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_ldexpf4.h psl1ght-PS3/common
  }
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_lldiv.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_lldiv.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_lldiv.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_lldiv.h	2014-06-27 22:15:27.005300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_lldiv.h	2014-07-04 16:38:29.167078079 -0400
 @@ -50,12 +50,12 @@
    vec_ullong2 mask = (vec_ullong2){0xffffffffffffffffull, 0ull};
    vec_ullong2 x_upper, x_lower;
@@ -1985,7 +1985,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_lldiv.h psl1ght-PS3/common/l
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_lldivi2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_lldivi2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_lldivi2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_lldivi2.h	2014-06-27 22:15:27.006300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_lldivi2.h	2014-07-04 16:38:29.167078079 -0400
 @@ -47,8 +47,9 @@
    return (vec_llong2)spu_subx(zero, (vec_int4)x, borrow);
  }
@@ -2024,7 +2024,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_lldivi2.h psl1ght-PS3/common
    res.quot = spu_sel((vec_llong2)resAbs.quot, __lldivi2_negatell2((vec_llong2)resAbs.quot),
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_lldivu2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_lldivu2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_lldivu2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_lldivu2.h	2014-06-27 22:15:27.006300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_lldivu2.h	2014-07-04 16:38:29.168078079 -0400
 @@ -35,8 +35,9 @@
  
  #include <simdmath/_lldiv.h>
@@ -2084,7 +2084,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_lldivu2.h psl1ght-PS3/common
        shift = (vec_int4)spu_sub( (vec_uint4)skip, numerZeros );
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_llrintd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_llrintd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_llrintd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_llrintd2.h	2014-06-27 22:15:27.006300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_llrintd2.h	2014-07-04 16:38:29.168078079 -0400
 @@ -34,9 +34,10 @@
  #include <simdmath.h>
  #include <spu_intrinsics.h>
@@ -2128,7 +2128,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_llrintd2.h psl1ght-PS3/commo
    /* Determine how many bits to shift the mantissa to correctly
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_llrintf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_llrintf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_llrintf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_llrintf4.h	2014-06-27 22:15:27.007300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_llrintf4.h	2014-07-04 16:38:29.169078079 -0400
 @@ -34,9 +34,10 @@
  #include <simdmath.h>
  #include <spu_intrinsics.h>
@@ -2145,7 +2145,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_llrintf4.h psl1ght-PS3/commo
  _llrintf4 (vector float in)
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_llroundd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_llroundd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_llroundd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_llroundd2.h	2014-06-27 22:15:27.007300087 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_llroundd2.h	2014-07-04 16:38:29.169078079 -0400
 @@ -34,9 +34,10 @@
  #include <simdmath.h>
  #include <spu_intrinsics.h>
@@ -2171,7 +2171,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_llroundd2.h psl1ght-PS3/comm
    /* Compute the two's complement of the mantissa if the 
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_llroundf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_llroundf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_llroundf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_llroundf4.h	2014-06-27 22:15:27.008300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_llroundf4.h	2014-07-04 16:38:29.170078079 -0400
 @@ -34,9 +34,10 @@
  #include <simdmath.h>
  #include <spu_intrinsics.h>
@@ -2200,7 +2200,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_llroundf4.h psl1ght-PS3/comm
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_logbd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_logbd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_logbd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_logbd2.h	2014-06-27 22:15:27.008300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_logbd2.h	2014-07-04 16:38:29.170078079 -0400
 @@ -51,7 +51,7 @@
    vec_uint4 cmpgt, cmpeq, cmpzr;
    vec_int4 lz, lz0, lz1;
@@ -2232,7 +2232,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_logbd2.h psl1ght-PS3/common/
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_modfd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_modfd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_modfd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_modfd2.h	2014-06-27 22:15:27.008300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_modfd2.h	2014-07-04 16:38:29.170078079 -0400
 @@ -35,7 +35,7 @@
  
  #include <simdmath/_truncd2.h>
@@ -2253,7 +2253,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_modfd2.h psl1ght-PS3/common/
    fraction = spu_sel(spu_sub( x, integral ), x, (vec_ullong2)iszero);
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_modff4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_modff4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_modff4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_modff4.h	2014-06-27 22:15:27.009300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_modff4.h	2014-07-04 16:38:29.171078079 -0400
 @@ -35,7 +35,7 @@
  
  #include <simdmath/_truncf4.h>
@@ -2265,7 +2265,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_modff4.h psl1ght-PS3/common/
  _modff4 (vector float x, vector float *iptr)
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_nearbyintd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_nearbyintd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_nearbyintd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_nearbyintd2.h	2014-06-27 22:15:27.009300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_nearbyintd2.h	2014-07-04 16:38:29.171078079 -0400
 @@ -44,12 +44,12 @@
  
    fpscr = spu_mffpscr();
@@ -2283,7 +2283,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_nearbyintd2.h psl1ght-PS3/co
    is_zerox = spu_and( is_zerox, spu_shuffle(is_zerox,is_zerox, ((vec_uchar16){4,5,6,7,0,1,2,3,12,13,14,15,8,9,10,11})));
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_nearbyintf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_nearbyintf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_nearbyintf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_nearbyintf4.h	2014-06-27 22:15:27.010300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_nearbyintf4.h	2014-07-04 16:38:29.171078079 -0400
 @@ -42,8 +42,9 @@
    vector signed int xi;
    vector unsigned int inrange;
@@ -2298,7 +2298,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_nearbyintf4.h psl1ght-PS3/co
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_nextafterd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_nextafterd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_nextafterd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_nextafterd2.h	2014-06-27 22:15:27.010300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_nextafterd2.h	2014-07-04 16:38:29.172078079 -0400
 @@ -47,34 +47,36 @@
    vec_uint4 msk_abs  = ((vec_uint4){0x7FFFFFFF,-1,0x7FFFFFFF,-1});
    vec_uchar16 msk_all_eq = ((vec_uchar16){4,5,6,7,0,1,2,3,12,13,14,15,8,9,10,11});
@@ -2359,7 +2359,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_nextafterd2.h psl1ght-PS3/co
    is_nany = spu_and( abs_y, msk_exp);
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_nextafterf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_nextafterf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_nextafterf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_nextafterf4.h	2014-06-27 22:15:27.010300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_nextafterf4.h	2014-07-04 16:38:29.172078079 -0400
 @@ -44,28 +44,29 @@
  
    vec_uint4 A, B;
@@ -2399,7 +2399,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_nextafterf4.h psl1ght-PS3/co
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_recipd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_recipd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_recipd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_recipd2.h	2014-06-27 22:15:27.011300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_recipd2.h	2014-07-04 16:38:29.173078079 -0400
 @@ -37,11 +37,12 @@
  #include <simdmath/_is0denormd2.h>
  #include <simdmath/_isnand2.h>
@@ -2451,7 +2451,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_recipd2.h psl1ght-PS3/common
    inf = spu_sel( (vec_double2)expmask, x, signmask );
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_recipf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_recipf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_recipf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_recipf4.h	2014-06-27 22:15:27.011300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_recipf4.h	2014-07-04 16:38:29.173078079 -0400
 @@ -36,9 +36,10 @@
  static inline vector float
  _recipf4 (vector float x)
@@ -2468,7 +2468,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_recipf4.h psl1ght-PS3/common
    vec_float4 oneish = (vec_float4)spu_splats(0x3f800001);
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_remainderd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_remainderd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_remainderd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_remainderd2.h	2014-06-27 22:15:27.012300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_remainderd2.h	2014-07-04 16:38:29.174078079 -0400
 @@ -54,27 +54,27 @@
    vec_uint4 vec_zero = spu_splats((unsigned int)0);
    vec_uint4 is_zeroy;
@@ -2543,7 +2543,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_remainderd2.h psl1ght-PS3/co
  }
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_remainderf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_remainderf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_remainderf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_remainderf4.h	2014-06-27 22:15:27.012300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_remainderf4.h	2014-07-04 16:38:29.174078079 -0400
 @@ -37,10 +37,12 @@
  #include <simdmath/_fabsf4.h>
  #include <simdmath/_copysignf4.h>
@@ -2620,7 +2620,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_remainderf4.h psl1ght-PS3/co
    cmp1 = spu_cmpgt( rem, yabshalf );
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_remainder.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_remainder.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_remainder.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_remainder.h	2014-06-27 22:15:27.013300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_remainder.h	2014-07-04 16:38:29.174078079 -0400
 @@ -38,11 +38,11 @@
  static inline vec_uint4
  __rem_twice_d(vec_uint4 aa)
@@ -2674,7 +2674,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_remainder.h psl1ght-PS3/comm
    return res;
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_remquod2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_remquod2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_remquod2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_remquod2.h	2014-06-27 22:15:27.013300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_remquod2.h	2014-07-04 16:38:29.175078079 -0400
 @@ -62,7 +62,7 @@
    vec_uint4 vec_zero = spu_splats((unsigned int)0);
    vec_uint4 is_zeroy;
@@ -2771,7 +2771,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_remquod2.h psl1ght-PS3/commo
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_remquof4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_remquof4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_remquof4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_remquof4.h	2014-06-27 22:15:27.014300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_remquof4.h	2014-07-04 16:38:29.175078079 -0400
 @@ -50,7 +50,7 @@
    vec_uint4 abs_x, abs_y, abs_2x, abs_8y;
    vec_uint4 exp_x, exp_y;
@@ -2833,7 +2833,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_remquof4.h psl1ght-PS3/commo
    quotient = spu_sel(spu_sub(0, quotient), quotient, quo_pos);
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_rintd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_rintd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_rintd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_rintd2.h	2014-06-27 22:15:27.014300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_rintd2.h	2014-07-04 16:38:29.176078079 -0400
 @@ -48,7 +48,7 @@
  
    abs_x     = spu_andc((vec_uint4)in, (vec_uint4)sign);
@@ -2845,7 +2845,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_rintd2.h psl1ght-PS3/common/
    is_zerox  = spu_and( is_zerox, spu_shuffle(is_zerox,is_zerox, ((vec_uchar16){4,5,6,7,0,1,2,3,12,13,14,15,8,9,10,11})));
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_rintf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_rintf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_rintf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_rintf4.h	2014-06-27 22:15:27.014300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_rintf4.h	2014-07-04 16:38:29.176078079 -0400
 @@ -41,8 +41,9 @@
    vector signed int xi;
    vector unsigned int inrange;
@@ -2860,7 +2860,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_rintf4.h psl1ght-PS3/common/
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_roundd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_roundd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_roundd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_roundd2.h	2014-06-27 22:15:27.015300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_roundd2.h	2014-07-04 16:38:29.176078079 -0400
 @@ -65,7 +65,7 @@
    or_mask = spu_andc(spu_cmpgt(shift, 0), sign);
  
@@ -2872,7 +2872,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_roundd2.h psl1ght-PS3/common
    /* Apply the mask and return the result.
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_rsqrtd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_rsqrtd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_rsqrtd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_rsqrtd2.h	2014-06-27 22:15:27.015300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_rsqrtd2.h	2014-07-04 16:38:29.177078079 -0400
 @@ -37,14 +37,15 @@
  #include <simdmath/_signbitd2.h>
  #include <simdmath/_is0denormd2.h>
@@ -2949,7 +2949,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_rsqrtd2.h psl1ght-PS3/common
    inf = spu_sel( (vec_double2)expmask, x, signmask );
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_rsqrtf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_rsqrtf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_rsqrtf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_rsqrtf4.h	2014-06-27 22:15:27.016300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_rsqrtf4.h	2014-07-04 16:38:29.177078079 -0400
 @@ -26,7 +26,7 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
     POSSIBILITY OF SUCH DAMAGE.
@@ -2970,7 +2970,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_rsqrtf4.h psl1ght-PS3/common
    vec_float4 oneish = (vec_float4)spu_splats(0x3f800001);
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_scalbllnd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_scalbllnd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_scalbllnd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_scalbllnd2.h	2014-06-27 22:15:27.016300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_scalbllnd2.h	2014-07-04 16:38:29.178078079 -0400
 @@ -42,9 +42,9 @@
  {
    vec_int4 e1, e2;
@@ -3207,7 +3207,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_scalbllnd2.h psl1ght-PS3/com
    out = (vec_double2)spu_sel((vec_uint4)out , (vec_uint4)in, is_inf);
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_scalbnf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_scalbnf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_scalbnf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_scalbnf4.h	2014-06-27 22:15:27.017300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_scalbnf4.h	2014-07-04 16:38:29.178078079 -0400
 @@ -57,7 +57,7 @@
  
    zero = spu_orc(zero, spu_cmpgt(x_exp, 0));
@@ -3228,7 +3228,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_scalbnf4.h psl1ght-PS3/commo
    return out;
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_sincosd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_sincosd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_sincosd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_sincosd2.h	2014-06-27 22:15:27.017300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_sincosd2.h	2014-07-04 16:38:29.179078079 -0400
 @@ -38,58 +38,57 @@
  #include <simdmath/_isnand2.h>
  #include <simdmath/_is0denormd2.h>
@@ -3360,7 +3360,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_sincosd2.h psl1ght-PS3/commo
    tc = spu_sel(tc,spu_splats(1.0),zeroMask);
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_sincosf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_sincosf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_sincosf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_sincosf4.h	2014-06-27 22:15:27.018300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_sincosf4.h	2014-07-04 16:38:29.179078079 -0400
 @@ -35,10 +35,11 @@
  
  #include <simdmath/_sincos.h>
@@ -3459,7 +3459,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_sincosf4.h psl1ght-PS3/commo
      
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_sind2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_sind2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_sind2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_sind2.h	2014-06-27 22:15:27.018300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_sind2.h	2014-07-04 16:38:29.180078079 -0400
 @@ -35,9 +35,10 @@
  
  #include <simdmath/_sincosd2.h>
@@ -3476,7 +3476,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_sind2.h psl1ght-PS3/common/l
  {
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_sinf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_sinf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_sinf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_sinf4.h	2014-06-27 22:15:27.018300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_sinf4.h	2014-07-04 16:38:29.180078079 -0400
 @@ -35,9 +35,10 @@
  
  #include <simdmath/_sincosf4.h>
@@ -3493,7 +3493,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_sinf4.h psl1ght-PS3/common/l
  {
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_sqrtd2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_sqrtd2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_sqrtd2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_sqrtd2.h	2014-06-27 22:15:27.019300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_sqrtd2.h	2014-07-04 16:38:29.181078079 -0400
 @@ -37,12 +37,13 @@
  #include <simdmath/_isnand2.h>
  #include <simdmath/_is0denormd2.h>
@@ -3572,7 +3572,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_sqrtd2.h psl1ght-PS3/common/
    inf = (vec_double2)expmask;
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_sqrtf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_sqrtf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_sqrtf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_sqrtf4.h	2014-06-27 22:15:27.019300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_sqrtf4.h	2014-07-04 16:38:29.181078079 -0400
 @@ -27,7 +27,7 @@
     POSSIBILITY OF SUCH DAMAGE.
   */
@@ -3593,7 +3593,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_sqrtf4.h psl1ght-PS3/common/
    vec_float4 oneish = (vec_float4)spu_splats(0x3f800001);
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_tand2.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_tand2.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_tand2.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_tand2.h	2014-06-27 22:15:27.019300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_tand2.h	2014-07-04 16:38:29.181078079 -0400
 @@ -56,38 +56,38 @@
    vec_double2 nan = (vec_double2)spu_splats(0x7ff8000000000000ull);
    vec_uchar16 copyEven = (vec_uchar16)(vec_uint4){ 0x00010203, 0x00010203, 0x08090a0b, 0x08090a0b };
@@ -3684,7 +3684,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_tand2.h psl1ght-PS3/common/l
    return res;
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_tanf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_tanf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_tanf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_tanf4.h	2014-06-27 22:15:27.020300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_tanf4.h	2014-07-04 16:38:29.182078080 -0400
 @@ -42,50 +42,50 @@
    vector float xl,x2,x3,res;
    vector signed int q;
@@ -3757,7 +3757,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_tanf4.h psl1ght-PS3/common/l
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_truncf4.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_truncf4.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_truncf4.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_truncf4.h	2014-06-27 22:15:27.020300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_truncf4.h	2014-07-04 16:38:29.182078080 -0400
 @@ -39,8 +39,9 @@
    vector signed int xi;
    vector unsigned int inrange;
@@ -3772,7 +3772,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_truncf4.h psl1ght-PS3/common
  
 diff -burN psl1ght/common/libsimdmath/spu/simdmath/_vec_utils.h psl1ght-PS3/common/libsimdmath/spu/simdmath/_vec_utils.h
 --- psl1ght/common/libsimdmath/spu/simdmath/_vec_utils.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_vec_utils.h	2014-06-27 22:15:27.021300088 -0400
++++ psl1ght-PS3/common/libsimdmath/spu/simdmath/_vec_utils.h	2014-07-04 16:38:29.183078080 -0400
 @@ -36,14 +36,14 @@
  static inline vec_uint4
  __vec_gt64_half(vec_uint4 aa, vec_uint4 bb)
@@ -3794,7 +3794,7 @@ diff -burN psl1ght/common/libsimdmath/spu/simdmath/_vec_utils.h psl1ght-PS3/comm
  
 diff -burN psl1ght/common/vectormath/ppu/cpp/boolInVec.h psl1ght-PS3/common/vectormath/ppu/cpp/boolInVec.h
 --- psl1ght/common/vectormath/ppu/cpp/boolInVec.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/vectormath/ppu/cpp/boolInVec.h	2014-06-27 22:15:27.021300088 -0400
++++ psl1ght-PS3/common/vectormath/ppu/cpp/boolInVec.h	2014-07-04 16:38:29.183078080 -0400
 @@ -39,9 +39,9 @@
  
  class floatInVec;
@@ -3915,7 +3915,7 @@ diff -burN psl1ght/common/vectormath/ppu/cpp/boolInVec.h psl1ght-PS3/common/vect
 +#endif /* boolInVec_h */
 diff -burN psl1ght/common/vectormath/ppu/cpp/floatInVec.h psl1ght-PS3/common/vectormath/ppu/cpp/floatInVec.h
 --- psl1ght/common/vectormath/ppu/cpp/floatInVec.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/vectormath/ppu/cpp/floatInVec.h	2014-06-27 22:15:27.021300088 -0400
++++ psl1ght-PS3/common/vectormath/ppu/cpp/floatInVec.h	2014-07-04 16:38:29.184078080 -0400
 @@ -41,9 +41,9 @@
  
  class boolInVec;
@@ -4044,7 +4044,7 @@ diff -burN psl1ght/common/vectormath/ppu/cpp/floatInVec.h psl1ght-PS3/common/vec
 +#endif /* floatInVec_h */
 diff -burN psl1ght/common/vectormath/ppu/cpp/mat_aos.h psl1ght-PS3/common/vectormath/ppu/cpp/mat_aos.h
 --- psl1ght/common/vectormath/ppu/cpp/mat_aos.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/vectormath/ppu/cpp/mat_aos.h	2014-06-27 22:15:27.022300088 -0400
++++ psl1ght-PS3/common/vectormath/ppu/cpp/mat_aos.h	2014-07-04 16:38:29.185078080 -0400
 @@ -33,9 +33,10 @@
  namespace Vectormath {
  namespace Aos {
@@ -4083,7 +4083,7 @@ diff -burN psl1ght/common/vectormath/ppu/cpp/mat_aos.h psl1ght-PS3/common/vector
  #endif
 diff -burN psl1ght/common/vectormath/ppu/cpp/quat_aos.h psl1ght-PS3/common/vectormath/ppu/cpp/quat_aos.h
 --- psl1ght/common/vectormath/ppu/cpp/quat_aos.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/vectormath/ppu/cpp/quat_aos.h	2014-06-27 22:15:27.023300088 -0400
++++ psl1ght-PS3/common/vectormath/ppu/cpp/quat_aos.h	2014-07-04 16:38:29.185078080 -0400
 @@ -29,9 +29,9 @@
  
  #ifndef _VECTORMATH_QUAT_AOS_CPP_H
@@ -4109,7 +4109,7 @@ diff -burN psl1ght/common/vectormath/ppu/cpp/quat_aos.h psl1ght-PS3/common/vecto
  #endif
 diff -burN psl1ght/common/vectormath/ppu/cpp/vec_aos.h psl1ght-PS3/common/vectormath/ppu/cpp/vec_aos.h
 --- psl1ght/common/vectormath/ppu/cpp/vec_aos.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/vectormath/ppu/cpp/vec_aos.h	2014-06-27 22:15:27.023300088 -0400
++++ psl1ght-PS3/common/vectormath/ppu/cpp/vec_aos.h	2014-07-04 16:38:29.186078080 -0400
 @@ -29,9 +29,10 @@
  
  #ifndef _VECTORMATH_VEC_AOS_CPP_H
@@ -4148,7 +4148,7 @@ diff -burN psl1ght/common/vectormath/ppu/cpp/vec_aos.h psl1ght-PS3/common/vector
  #endif
 diff -burN psl1ght/common/vectormath/ppu/cpp/vecidx_aos.h psl1ght-PS3/common/vectormath/ppu/cpp/vecidx_aos.h
 --- psl1ght/common/vectormath/ppu/cpp/vecidx_aos.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/vectormath/ppu/cpp/vecidx_aos.h	2014-06-27 22:15:27.023300088 -0400
++++ psl1ght-PS3/common/vectormath/ppu/cpp/vecidx_aos.h	2014-07-04 16:38:29.186078080 -0400
 @@ -35,11 +35,11 @@
  namespace Vectormath {
  namespace Aos {
@@ -4193,7 +4193,7 @@ diff -burN psl1ght/common/vectormath/ppu/cpp/vecidx_aos.h psl1ght-PS3/common/vec
  #endif
 diff -burN psl1ght/common/vectormath/ppu/cpp/vectormath_aos.h psl1ght-PS3/common/vectormath/ppu/cpp/vectormath_aos.h
 --- psl1ght/common/vectormath/ppu/cpp/vectormath_aos.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/vectormath/ppu/cpp/vectormath_aos.h	2014-06-27 22:15:27.026300088 -0400
++++ psl1ght-PS3/common/vectormath/ppu/cpp/vectormath_aos.h	2014-07-04 16:38:29.189078080 -0400
 @@ -44,9 +44,9 @@
  
  namespace Aos {
@@ -7538,7 +7538,7 @@ diff -burN psl1ght/common/vectormath/ppu/cpp/vectormath_aos.h psl1ght-PS3/common
  #include "quat_aos.h"
 diff -burN psl1ght/common/vectormath/spu/cpp/boolInVec.h psl1ght-PS3/common/vectormath/spu/cpp/boolInVec.h
 --- psl1ght/common/vectormath/spu/cpp/boolInVec.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/vectormath/spu/cpp/boolInVec.h	2014-06-27 22:15:27.027300088 -0400
++++ psl1ght-PS3/common/vectormath/spu/cpp/boolInVec.h	2014-07-04 16:38:29.190078080 -0400
 @@ -36,9 +36,9 @@
  
  class floatInVec;
@@ -7659,7 +7659,7 @@ diff -burN psl1ght/common/vectormath/spu/cpp/boolInVec.h psl1ght-PS3/common/vect
 +#endif /* boolInVec_h */
 diff -burN psl1ght/common/vectormath/spu/cpp/floatInVec.h psl1ght-PS3/common/vectormath/spu/cpp/floatInVec.h
 --- psl1ght/common/vectormath/spu/cpp/floatInVec.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/vectormath/spu/cpp/floatInVec.h	2014-06-27 22:15:27.027300088 -0400
++++ psl1ght-PS3/common/vectormath/spu/cpp/floatInVec.h	2014-07-04 16:38:29.190078080 -0400
 @@ -39,9 +39,9 @@
  
  class boolInVec;
@@ -7788,7 +7788,7 @@ diff -burN psl1ght/common/vectormath/spu/cpp/floatInVec.h psl1ght-PS3/common/vec
 +#endif /* floatInVec_h */
 diff -burN psl1ght/common/vectormath/spu/cpp/mat_aos.h psl1ght-PS3/common/vectormath/spu/cpp/mat_aos.h
 --- psl1ght/common/vectormath/spu/cpp/mat_aos.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/vectormath/spu/cpp/mat_aos.h	2014-06-27 22:15:27.028300088 -0400
++++ psl1ght-PS3/common/vectormath/spu/cpp/mat_aos.h	2014-07-04 16:38:29.191078080 -0400
 @@ -33,9 +33,10 @@
  namespace Vectormath {
  namespace Aos {
@@ -7827,7 +7827,7 @@ diff -burN psl1ght/common/vectormath/spu/cpp/mat_aos.h psl1ght-PS3/common/vector
  #endif
 diff -burN psl1ght/common/vectormath/spu/cpp/quat_aos.h psl1ght-PS3/common/vectormath/spu/cpp/quat_aos.h
 --- psl1ght/common/vectormath/spu/cpp/quat_aos.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/vectormath/spu/cpp/quat_aos.h	2014-06-27 22:15:27.028300088 -0400
++++ psl1ght-PS3/common/vectormath/spu/cpp/quat_aos.h	2014-07-04 16:38:29.191078080 -0400
 @@ -29,8 +29,9 @@
  
  #ifndef _VECTORMATH_QUAT_AOS_CPP_H
@@ -7852,7 +7852,7 @@ diff -burN psl1ght/common/vectormath/spu/cpp/quat_aos.h psl1ght-PS3/common/vecto
  #endif
 diff -burN psl1ght/common/vectormath/spu/cpp/vec_aos.h psl1ght-PS3/common/vectormath/spu/cpp/vec_aos.h
 --- psl1ght/common/vectormath/spu/cpp/vec_aos.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/vectormath/spu/cpp/vec_aos.h	2014-06-27 22:15:27.029300088 -0400
++++ psl1ght-PS3/common/vectormath/spu/cpp/vec_aos.h	2014-07-04 16:38:29.192078080 -0400
 @@ -29,9 +29,10 @@
  
  #ifndef _VECTORMATH_VEC_AOS_CPP_H
@@ -7891,7 +7891,7 @@ diff -burN psl1ght/common/vectormath/spu/cpp/vec_aos.h psl1ght-PS3/common/vector
  #endif
 diff -burN psl1ght/common/vectormath/spu/cpp/vecidx_aos.h psl1ght-PS3/common/vectormath/spu/cpp/vecidx_aos.h
 --- psl1ght/common/vectormath/spu/cpp/vecidx_aos.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/vectormath/spu/cpp/vecidx_aos.h	2014-06-27 22:15:27.029300088 -0400
++++ psl1ght-PS3/common/vectormath/spu/cpp/vecidx_aos.h	2014-07-04 16:38:29.192078080 -0400
 @@ -35,11 +35,11 @@
  namespace Vectormath {
  namespace Aos {
@@ -7921,7 +7921,7 @@ diff -burN psl1ght/common/vectormath/spu/cpp/vecidx_aos.h psl1ght-PS3/common/vec
  #endif
 diff -burN psl1ght/common/vectormath/spu/cpp/vectormath_aos.h psl1ght-PS3/common/vectormath/spu/cpp/vectormath_aos.h
 --- psl1ght/common/vectormath/spu/cpp/vectormath_aos.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/common/vectormath/spu/cpp/vectormath_aos.h	2014-06-27 22:15:27.031300088 -0400
++++ psl1ght-PS3/common/vectormath/spu/cpp/vectormath_aos.h	2014-07-04 16:38:29.194078080 -0400
 @@ -44,9 +44,9 @@
  
  namespace Aos {
@@ -10652,9 +10652,21 @@ diff -burN psl1ght/common/vectormath/spu/cpp/vectormath_aos.h psl1ght-PS3/common
  
  #include "vec_aos.h"
  #include "quat_aos.h"
+diff -burN psl1ght/data_rules psl1ght-PS3/data_rules
+--- psl1ght/data_rules	2013-01-07 17:10:43.000000000 -0500
++++ psl1ght-PS3/data_rules	2014-07-04 16:39:13.691079662 -0400
+@@ -13,7 +13,7 @@
+ export LIBPSL1GHT_INC	:=	-I$(PSL1GHT)/ppu/include -I$(PSL1GHT)/ppu/include/simdmath
+ export LIBPSL1GHT_LIB	:=	-L$(PSL1GHT)/ppu/lib
+ 
+-PREFIX	:=	ppu-
++PREFIX	:=	powerpc64-ps3-elf-
+ 
+ MACHDEP	=	-mhard-float -fmodulo-sched -ffunction-sections -fdata-sections
+ 
 diff -burN psl1ght/ppu/include/io/move.h psl1ght-PS3/ppu/include/io/move.h
 --- psl1ght/ppu/include/io/move.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/include/io/move.h	2014-06-27 22:15:27.032300088 -0400
++++ psl1ght-PS3/ppu/include/io/move.h	2014-07-04 16:38:29.195078080 -0400
 @@ -108,8 +108,8 @@
  {
  	u32 version;
@@ -10686,7 +10698,7 @@ diff -burN psl1ght/ppu/include/io/move.h psl1ght-PS3/ppu/include/io/move.h
  s32 gemUpdateFinish();
 diff -burN psl1ght/ppu/include/lv2/spu.h psl1ght-PS3/ppu/include/lv2/spu.h
 --- psl1ght/ppu/include/lv2/spu.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/include/lv2/spu.h	2014-06-27 22:15:27.032300088 -0400
++++ psl1ght-PS3/ppu/include/lv2/spu.h	2014-07-04 16:38:29.195078080 -0400
 @@ -28,7 +28,7 @@
  extern "C" {
  #endif
@@ -10730,7 +10742,7 @@ diff -burN psl1ght/ppu/include/lv2/spu.h psl1ght-PS3/ppu/include/lv2/spu.h
  
 diff -burN psl1ght/ppu/include/lv2/sysfs.h psl1ght-PS3/ppu/include/lv2/sysfs.h
 --- psl1ght/ppu/include/lv2/sysfs.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/include/lv2/sysfs.h	2014-06-27 22:15:27.033300088 -0400
++++ psl1ght-PS3/ppu/include/lv2/sysfs.h	2014-07-04 16:38:29.196078080 -0400
 @@ -4,8 +4,9 @@
  #include <time.h>
  #include <unistd.h>
@@ -10744,7 +10756,7 @@ diff -burN psl1ght/ppu/include/lv2/sysfs.h psl1ght-PS3/ppu/include/lv2/sysfs.h
  #define SYS_O_RDWR			000002
 diff -burN psl1ght/ppu/include/net/socket.h psl1ght-PS3/ppu/include/net/socket.h
 --- psl1ght/ppu/include/net/socket.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/include/net/socket.h	2014-06-27 22:15:27.055300089 -0400
++++ psl1ght-PS3/ppu/include/net/socket.h	2014-07-04 16:38:29.196078080 -0400
 @@ -1,7 +1,7 @@
  #ifndef __SOCKET_H__
  #define __SOCKET_H__
@@ -10756,7 +10768,7 @@ diff -burN psl1ght/ppu/include/net/socket.h psl1ght-PS3/ppu/include/net/socket.h
  typedef u32 socklen_t;
 diff -burN psl1ght/ppu/include/ppu-types.h psl1ght-PS3/ppu/include/ppu-types.h
 --- psl1ght/ppu/include/ppu-types.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/include/ppu-types.h	2014-06-27 22:15:27.056300089 -0400
++++ psl1ght-PS3/ppu/include/ppu-types.h	2014-07-04 16:38:29.196078080 -0400
 @@ -117,7 +117,7 @@
  
  #define ATTRIBUTE_PRXPTR			__attribute__((mode(SI)))
@@ -10768,7 +10780,7 @@ diff -burN psl1ght/ppu/include/ppu-types.h psl1ght-PS3/ppu/include/ppu-types.h
  
 diff -burN psl1ght/ppu/include/ssl/ssl.h psl1ght-PS3/ppu/include/ssl/ssl.h
 --- psl1ght/ppu/include/ssl/ssl.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/include/ssl/ssl.h	2014-06-27 22:15:27.056300089 -0400
++++ psl1ght-PS3/ppu/include/ssl/ssl.h	2014-07-04 16:38:29.197078080 -0400
 @@ -132,8 +132,8 @@
  int sslCertGetRsaPublicKeyModulus(const sslCert cert, const uint8_t **sboData, size_t *sboLength);
  int sslCertGetRsaPublicKeyExponent(const sslCert cert, const uint8_t **sboData, size_t *sboLength);
@@ -10782,7 +10794,7 @@ diff -burN psl1ght/ppu/include/ssl/ssl.h psl1ght-PS3/ppu/include/ssl/ssl.h
  
 diff -burN psl1ght/ppu/include/sys/dbg.h psl1ght-PS3/ppu/include/sys/dbg.h
 --- psl1ght/ppu/include/sys/dbg.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/include/sys/dbg.h	2014-06-27 22:15:27.056300089 -0400
++++ psl1ght-PS3/ppu/include/sys/dbg.h	2014-07-04 16:38:29.197078080 -0400
 @@ -159,7 +159,7 @@
  \return zero if no error occured, nonzero otherwise.
  */
@@ -10832,7 +10844,7 @@ diff -burN psl1ght/ppu/include/sys/dbg.h psl1ght-PS3/ppu/include/sys/dbg.h
  	}
 diff -burN psl1ght/ppu/include/sys/spu.h psl1ght-PS3/ppu/include/sys/spu.h
 --- psl1ght/ppu/include/sys/spu.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/include/sys/spu.h	2014-06-27 22:15:27.057300089 -0400
++++ psl1ght-PS3/ppu/include/sys/spu.h	2014-07-04 16:38:29.198078080 -0400
 @@ -103,62 +103,62 @@
  #include <lv2/spu.h>
  
@@ -11007,7 +11019,7 @@ diff -burN psl1ght/ppu/include/sys/spu.h psl1ght-PS3/ppu/include/sys/spu.h
  /*! \brief Initialize the SPU management.
 diff -burN psl1ght/ppu/include/sysutil/osk.h psl1ght-PS3/ppu/include/sysutil/osk.h
 --- psl1ght/ppu/include/sysutil/osk.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/include/sysutil/osk.h	2014-06-27 22:15:27.057300089 -0400
++++ psl1ght-PS3/ppu/include/sysutil/osk.h	2014-07-04 16:38:29.198078080 -0400
 @@ -101,22 +101,22 @@
  /*! \brief On-screen keyboard type values. */
  typedef enum
@@ -11087,7 +11099,7 @@ diff -burN psl1ght/ppu/include/sysutil/osk.h psl1ght-PS3/ppu/include/sysutil/osk
  /*! \brief Set initial input device.
 diff -burN psl1ght/ppu/include/usb/usb.h psl1ght-PS3/ppu/include/usb/usb.h
 --- psl1ght/ppu/include/usb/usb.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/include/usb/usb.h	2014-06-27 22:15:27.057300089 -0400
++++ psl1ght-PS3/ppu/include/usb/usb.h	2014-07-04 16:38:29.199078080 -0400
 @@ -529,7 +529,7 @@
  s32 usbSetPrivateData(s32 device_id, void *priv);
  
@@ -11099,7 +11111,7 @@ diff -burN psl1ght/ppu/include/usb/usb.h psl1ght-PS3/ppu/include/usb/usb.h
  s32 usbRegisterLdd(usbLddOps *lddops);
 diff -burN psl1ght/ppu/librsx/buffer.c psl1ght-PS3/ppu/librsx/buffer.c
 --- psl1ght/ppu/librsx/buffer.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/librsx/buffer.c	2014-06-27 22:15:27.058300089 -0400
++++ psl1ght-PS3/ppu/librsx/buffer.c	2014-07-04 16:38:29.199078080 -0400
 @@ -6,7 +6,7 @@
  
  void rsxResetCommandBuffer(gcmContextData *context)
@@ -11111,7 +11123,7 @@ diff -burN psl1ght/ppu/librsx/buffer.c psl1ght-PS3/ppu/librsx/buffer.c
  	__sync();
 diff -burN psl1ght/ppu/librsx/commands.c psl1ght-PS3/ppu/librsx/commands.c
 --- psl1ght/ppu/librsx/commands.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/librsx/commands.c	2014-06-27 22:15:27.058300089 -0400
++++ psl1ght-PS3/ppu/librsx/commands.c	2014-07-04 16:38:29.200078080 -0400
 @@ -595,17 +595,17 @@
  	size0 = (texture->width << NV40TCL_TEX_SIZE0_W_SHIFT) | texture->height;
  	size1 = (texture->depth << NV40TCL_TEX_SIZE1_DEPTH_SHIFT) | texture->pitch;
@@ -11154,7 +11166,7 @@ diff -burN psl1ght/ppu/librsx/commands.c psl1ght-PS3/ppu/librsx/commands.c
  	RSX_CONTEXT_CURRENT_BEGIN(20);
 diff -burN psl1ght/ppu/sprx/libjpgdec/jpgdec.c psl1ght-PS3/ppu/sprx/libjpgdec/jpgdec.c
 --- psl1ght/ppu/sprx/libjpgdec/jpgdec.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/sprx/libjpgdec/jpgdec.c	2014-06-27 22:15:27.058300089 -0400
++++ psl1ght-PS3/ppu/sprx/libjpgdec/jpgdec.c	2014-07-04 16:38:29.200078080 -0400
 @@ -58,9 +58,9 @@
  	InThdParam.ppu_prio = 512;
  	InThdParam.spu_prio = 200;
@@ -11169,7 +11181,7 @@ diff -burN psl1ght/ppu/sprx/libjpgdec/jpgdec.c psl1ght-PS3/ppu/sprx/libjpgdec/jp
  
 diff -burN psl1ght/ppu/sprx/libnet/init.c psl1ght-PS3/ppu/sprx/libnet/init.c
 --- psl1ght/ppu/sprx/libnet/init.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/sprx/libnet/init.c	2014-06-27 22:15:27.059300089 -0400
++++ psl1ght-PS3/ppu/sprx/libnet/init.c	2014-07-04 16:38:29.200078080 -0400
 @@ -6,7 +6,7 @@
  #include <net/net.h>
  #include <sysmodule/sysmodule.h>
@@ -11181,7 +11193,7 @@ diff -burN psl1ght/ppu/sprx/libnet/init.c psl1ght-PS3/ppu/sprx/libnet/init.c
  
 diff -burN psl1ght/ppu/sprx/libnet/socket.c psl1ght-PS3/ppu/sprx/libnet/socket.c
 --- psl1ght/ppu/sprx/libnet/socket.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/sprx/libnet/socket.c	2014-06-27 22:15:27.077300090 -0400
++++ psl1ght-PS3/ppu/sprx/libnet/socket.c	2014-07-04 16:38:29.219078081 -0400
 @@ -100,16 +100,16 @@
  	[NET_EDQUOT]			= EDQUOT,
  	[NET_ESTALE]			= ESTALE,
@@ -33002,7 +33014,7 @@ diff -burN psl1ght/ppu/sprx/libnet/socket.c psl1ght-PS3/ppu/sprx/libnet/socket.c
  struct servent *
 diff -burN psl1ght/ppu/sprx/libpngdec/pngdec.c psl1ght-PS3/ppu/sprx/libpngdec/pngdec.c
 --- psl1ght/ppu/sprx/libpngdec/pngdec.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/sprx/libpngdec/pngdec.c	2014-06-27 22:15:27.079300090 -0400
++++ psl1ght-PS3/ppu/sprx/libpngdec/pngdec.c	2014-07-04 16:38:29.221078081 -0400
 @@ -58,9 +58,9 @@
  	InThdParam.ppu_prio = 512;
  	InThdParam.spu_prio = 200;
@@ -33017,7 +33029,7 @@ diff -burN psl1ght/ppu/sprx/libpngdec/pngdec.c psl1ght-PS3/ppu/sprx/libpngdec/pn
  
 diff -burN psl1ght/ppu/sprx/libspurs/exports.h psl1ght-PS3/ppu/sprx/libspurs/exports.h
 --- psl1ght/ppu/sprx/libspurs/exports.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/sprx/libspurs/exports.h	2014-06-27 22:15:27.080300090 -0400
++++ psl1ght-PS3/ppu/sprx/libspurs/exports.h	2014-07-04 16:38:29.221078081 -0400
 @@ -1,6 +1,6 @@
  #ifndef __EXPORTS_H__
  #define __EXPORTS_H__
@@ -33035,9 +33047,21 @@ diff -burN psl1ght/ppu/sprx/libspurs/exports.h psl1ght-PS3/ppu/sprx/libspurs/exp
  
  
  EXPORT(spursJobGuardReset, 0xaf2519);
+diff -burN psl1ght/ppu_rules psl1ght-PS3/ppu_rules
+--- psl1ght/ppu_rules	2013-01-07 17:10:43.000000000 -0500
++++ psl1ght-PS3/ppu_rules	2014-07-04 16:39:24.947080062 -0400
+@@ -13,7 +13,7 @@
+ export LIBPSL1GHT_INC	:=	-I$(PSL1GHT)/ppu/include -I$(PSL1GHT)/ppu/include/simdmath
+ export LIBPSL1GHT_LIB	:=	-L$(PSL1GHT)/ppu/lib
+ 
+-PREFIX			:=	ppu-
++PREFIX			:=	powerpc64-ps3-elf-
+ 
+ MACHDEP			=	-mhard-float -fmodulo-sched -ffunction-sections -fdata-sections
+ 
 diff -burN psl1ght/samples/audio/audiotest/source/main.c psl1ght-PS3/samples/audio/audiotest/source/main.c
 --- psl1ght/samples/audio/audiotest/source/main.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/audio/audiotest/source/main.c	2014-06-27 22:15:27.080300090 -0400
++++ psl1ght-PS3/samples/audio/audiotest/source/main.c	2014-07-04 16:38:29.222078081 -0400
 @@ -18,9 +18,9 @@
  
  	for (unsigned int i = 0; i < AUDIO_BLOCK_SAMPLES; ++i)
@@ -33128,7 +33152,7 @@ diff -burN psl1ght/samples/audio/audiotest/source/main.c psl1ght-PS3/samples/aud
  	ret=audioPortClose(portNum);
 diff -burN psl1ght/samples/graphics/blitting/source/main.c psl1ght-PS3/samples/graphics/blitting/source/main.c
 --- psl1ght/samples/graphics/blitting/source/main.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/graphics/blitting/source/main.c	2014-06-27 22:15:27.080300090 -0400
++++ psl1ght-PS3/samples/graphics/blitting/source/main.c	2014-07-04 16:38:29.222078081 -0400
 @@ -76,10 +76,10 @@
      printf("Quit game requested\n");
      exit(0);
@@ -33156,7 +33180,7 @@ diff -burN psl1ght/samples/graphics/blitting/source/main.c psl1ght-PS3/samples/g
    status = videoGetResolution(state.displayMode.resolution, &vdat->res);
 diff -burN psl1ght/samples/graphics/cairo/include/rsxutil.h psl1ght-PS3/samples/graphics/cairo/include/rsxutil.h
 --- psl1ght/samples/graphics/cairo/include/rsxutil.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/graphics/cairo/include/rsxutil.h	2014-06-27 22:15:27.081300090 -0400
++++ psl1ght-PS3/samples/graphics/cairo/include/rsxutil.h	2014-07-04 16:38:29.222078081 -0400
 @@ -21,7 +21,7 @@
    int width;
    int id;
@@ -33168,7 +33192,7 @@ diff -burN psl1ght/samples/graphics/cairo/include/rsxutil.h psl1ght-PS3/samples/
  
 diff -burN psl1ght/samples/graphics/cairo/Makefile psl1ght-PS3/samples/graphics/cairo/Makefile
 --- psl1ght/samples/graphics/cairo/Makefile	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/graphics/cairo/Makefile	2014-06-27 22:15:27.081300090 -0400
++++ psl1ght-PS3/samples/graphics/cairo/Makefile	2014-07-04 16:38:29.223078081 -0400
 @@ -37,7 +37,7 @@
  #---------------------------------------------------------------------------------
  # any extra libraries we wish to link with the project
@@ -33190,7 +33214,7 @@ diff -burN psl1ght/samples/graphics/cairo/Makefile psl1ght-PS3/samples/graphics/
  
 diff -burN psl1ght/samples/graphics/cairo/source/main.c psl1ght-PS3/samples/graphics/cairo/source/main.c
 --- psl1ght/samples/graphics/cairo/source/main.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/graphics/cairo/source/main.c	2014-06-27 22:15:27.082300090 -0400
++++ psl1ght-PS3/samples/graphics/cairo/source/main.c	2014-07-04 16:38:29.223078081 -0400
 @@ -15,7 +15,7 @@
  
  #define DEBUG(...)
@@ -33238,7 +33262,7 @@ diff -burN psl1ght/samples/graphics/cairo/source/main.c psl1ght-PS3/samples/grap
      if (currentBuffer >= MAX_BUFFERS)
 diff -burN psl1ght/samples/graphics/cairo/source/rsxutil.c psl1ght-PS3/samples/graphics/cairo/source/rsxutil.c
 --- psl1ght/samples/graphics/cairo/source/rsxutil.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/graphics/cairo/source/rsxutil.c	2014-06-27 22:15:27.082300090 -0400
++++ psl1ght-PS3/samples/graphics/cairo/source/rsxutil.c	2014-07-04 16:38:29.223078081 -0400
 @@ -39,7 +39,7 @@
  {
    if (gcmSetFlip (context, buffer) == 0) {
@@ -33259,7 +33283,7 @@ diff -burN psl1ght/samples/graphics/cairo/source/rsxutil.c psl1ght-PS3/samples/g
    depth_buffer = (u32 *) rsxMemalign (64, (res.height * depth_pitch)* 2);
 diff -burN psl1ght/samples/graphics/rsxtest_spu/Makefile psl1ght-PS3/samples/graphics/rsxtest_spu/Makefile
 --- psl1ght/samples/graphics/rsxtest_spu/Makefile	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/graphics/rsxtest_spu/Makefile	2014-06-27 22:15:27.082300090 -0400
++++ psl1ght-PS3/samples/graphics/rsxtest_spu/Makefile	2014-07-04 16:38:29.224078081 -0400
 @@ -70,7 +70,8 @@
  CPPFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
  sFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.s)))
@@ -33272,7 +33296,7 @@ diff -burN psl1ght/samples/graphics/rsxtest_spu/Makefile psl1ght-PS3/samples/gra
  
 diff -burN psl1ght/samples/graphics/rsxtest_spu/source/main.cpp psl1ght-PS3/samples/graphics/rsxtest_spu/source/main.cpp
 --- psl1ght/samples/graphics/rsxtest_spu/source/main.cpp	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/graphics/rsxtest_spu/source/main.cpp	2014-06-27 22:15:27.083300090 -0400
++++ psl1ght-PS3/samples/graphics/rsxtest_spu/source/main.cpp	2014-07-04 16:38:29.224078081 -0400
 @@ -274,7 +274,7 @@
  	rsxSetFragmentProgramParameter(context,fpo,eyePosition_id,(float*)&objEyePos,fp_offset);
  	rsxSetFragmentProgramParameter(context,fpo,globalAmbient_id,globalAmbientColor,fp_offset);
@@ -33284,7 +33308,7 @@ diff -burN psl1ght/samples/graphics/rsxtest_spu/source/main.cpp psl1ght-PS3/samp
  	rsxSetFragmentProgramParameter(context,fpo,Kd_id,materialColorDiffuse,fp_offset);
 diff -burN psl1ght/samples/graphics/videoTest/include/rsxutil.h psl1ght-PS3/samples/graphics/videoTest/include/rsxutil.h
 --- psl1ght/samples/graphics/videoTest/include/rsxutil.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/graphics/videoTest/include/rsxutil.h	2014-06-27 22:15:27.083300090 -0400
++++ psl1ght-PS3/samples/graphics/videoTest/include/rsxutil.h	2014-07-04 16:38:29.224078081 -0400
 @@ -21,7 +21,7 @@
    int width;
    int id;
@@ -33296,7 +33320,7 @@ diff -burN psl1ght/samples/graphics/videoTest/include/rsxutil.h psl1ght-PS3/samp
  
 diff -burN psl1ght/samples/graphics/videoTest/source/main.c psl1ght-PS3/samples/graphics/videoTest/source/main.c
 --- psl1ght/samples/graphics/videoTest/source/main.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/graphics/videoTest/source/main.c	2014-06-27 22:15:27.084300090 -0400
++++ psl1ght-PS3/samples/graphics/videoTest/source/main.c	2014-07-04 16:38:29.225078081 -0400
 @@ -24,7 +24,7 @@
    s32 i, j;
    for(i = 0; i < buffer->height; i++) {
@@ -33336,7 +33360,7 @@ diff -burN psl1ght/samples/graphics/videoTest/source/main.c psl1ght-PS3/samples/
      if (currentBuffer >= MAX_BUFFERS)
 diff -burN psl1ght/samples/graphics/videoTest/source/rsxutil.c psl1ght-PS3/samples/graphics/videoTest/source/rsxutil.c
 --- psl1ght/samples/graphics/videoTest/source/rsxutil.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/graphics/videoTest/source/rsxutil.c	2014-06-27 22:15:27.084300090 -0400
++++ psl1ght-PS3/samples/graphics/videoTest/source/rsxutil.c	2014-07-04 16:38:29.225078081 -0400
 @@ -39,7 +39,7 @@
  {
    if (gcmSetFlip (context, buffer) == 0) {
@@ -33357,7 +33381,7 @@ diff -burN psl1ght/samples/graphics/videoTest/source/rsxutil.c psl1ght-PS3/sampl
    depth_buffer = (u32 *) rsxMemalign (64, (res.height * depth_pitch)* 2);
 diff -burN psl1ght/samples/input/camera/source/main.c psl1ght-PS3/samples/input/camera/source/main.c
 --- psl1ght/samples/input/camera/source/main.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/input/camera/source/main.c	2014-06-27 22:15:27.085300090 -0400
++++ psl1ght-PS3/samples/input/camera/source/main.c	2014-07-04 16:38:29.226078081 -0400
 @@ -26,15 +26,15 @@
  #include <arpa/inet.h>
  #include "sysutil/events.h"
@@ -33575,7 +33599,7 @@ diff -burN psl1ght/samples/input/camera/source/main.c psl1ght-PS3/samples/input/
  	}
 diff -burN psl1ght/samples/input/gemsample/include/rsxutil.h psl1ght-PS3/samples/input/gemsample/include/rsxutil.h
 --- psl1ght/samples/input/gemsample/include/rsxutil.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/input/gemsample/include/rsxutil.h	2014-06-27 22:15:27.085300090 -0400
++++ psl1ght-PS3/samples/input/gemsample/include/rsxutil.h	2014-07-04 16:38:29.226078081 -0400
 @@ -21,7 +21,7 @@
    int width;
    int id;
@@ -33587,7 +33611,7 @@ diff -burN psl1ght/samples/input/gemsample/include/rsxutil.h psl1ght-PS3/samples
  
 diff -burN psl1ght/samples/input/gemsample/source/camera.c psl1ght-PS3/samples/input/gemsample/source/camera.c
 --- psl1ght/samples/input/gemsample/source/camera.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/input/gemsample/source/camera.c	2014-06-27 22:15:27.085300090 -0400
++++ psl1ght-PS3/samples/input/gemsample/source/camera.c	2014-07-04 16:38:29.226078081 -0400
 @@ -6,7 +6,7 @@
  
  sys_mem_container_t container;
@@ -33639,7 +33663,7 @@ diff -burN psl1ght/samples/input/gemsample/source/camera.c psl1ght-PS3/samples/i
  }
 diff -burN psl1ght/samples/input/gemsample/source/gem.c psl1ght-PS3/samples/input/gemsample/source/gem.c
 --- psl1ght/samples/input/gemsample/source/gem.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/input/gemsample/source/gem.c	2014-06-27 22:15:27.086300090 -0400
++++ psl1ght-PS3/samples/input/gemsample/source/gem.c	2014-07-04 16:38:29.227078081 -0400
 @@ -30,8 +30,8 @@
  extern int currentBuffer;
  float rx, ry;
@@ -33685,7 +33709,7 @@ diff -burN psl1ght/samples/input/gemsample/source/gem.c psl1ght-PS3/samples/inpu
        printf ("Select pressed \n");
 diff -burN psl1ght/samples/input/gemsample/source/main.c psl1ght-PS3/samples/input/gemsample/source/main.c
 --- psl1ght/samples/input/gemsample/source/main.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/input/gemsample/source/main.c	2014-06-27 22:15:27.086300090 -0400
++++ psl1ght-PS3/samples/input/gemsample/source/main.c	2014-07-04 16:38:29.227078081 -0400
 @@ -40,11 +40,11 @@
  #include <sys/memory.h>
  #include <io/camera.h>
@@ -33807,7 +33831,7 @@ diff -burN psl1ght/samples/input/gemsample/source/main.c psl1ght-PS3/samples/inp
      if (currentBuffer >= MAX_BUFFERS)
 diff -burN psl1ght/samples/input/gemsample/source/rsxutil.c psl1ght-PS3/samples/input/gemsample/source/rsxutil.c
 --- psl1ght/samples/input/gemsample/source/rsxutil.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/input/gemsample/source/rsxutil.c	2014-06-27 22:15:27.087300090 -0400
++++ psl1ght-PS3/samples/input/gemsample/source/rsxutil.c	2014-07-04 16:38:29.227078081 -0400
 @@ -18,7 +18,7 @@
  #include "rsxutil.h"
  
@@ -33868,7 +33892,7 @@ diff -burN psl1ght/samples/input/gemsample/source/rsxutil.c psl1ght-PS3/samples/
    depth_buffer = (u32 *) rsxMemalign (64, (res.height * depth_pitch) * 2);
 diff -burN psl1ght/samples/input/gemtest/source/main.c psl1ght-PS3/samples/input/gemtest/source/main.c
 --- psl1ght/samples/input/gemtest/source/main.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/input/gemtest/source/main.c	2014-06-27 22:15:27.087300090 -0400
++++ psl1ght-PS3/samples/input/gemtest/source/main.c	2014-07-04 16:38:29.228078081 -0400
 @@ -23,7 +23,7 @@
  #include <io/camera.h>
  #include <io/move.h>
@@ -34293,7 +34317,7 @@ diff -burN psl1ght/samples/input/gemtest/source/main.c psl1ght-PS3/samples/input
  
 diff -burN psl1ght/samples/network/networktest/source/main.c psl1ght-PS3/samples/network/networktest/source/main.c
 --- psl1ght/samples/network/networktest/source/main.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/network/networktest/source/main.c	2014-06-27 22:15:27.088300090 -0400
++++ psl1ght-PS3/samples/network/networktest/source/main.c	2014-07-04 16:38:29.229078081 -0400
 @@ -1,6 +1,7 @@
 -// This sample application will connect to a specified IP using the PS3's
 -// network and send a small message. It will try sending it with both
@@ -34326,7 +34350,7 @@ diff -burN psl1ght/samples/network/networktest/source/main.c psl1ght-PS3/samples
  #define TESTPORT	4000
 diff -burN psl1ght/samples/network/ps3load/Makefile psl1ght-PS3/samples/network/ps3load/Makefile
 --- psl1ght/samples/network/ps3load/Makefile	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/network/ps3load/Makefile	2014-06-27 22:15:27.088300090 -0400
++++ psl1ght-PS3/samples/network/ps3load/Makefile	2014-07-04 16:38:29.229078081 -0400
 @@ -89,7 +89,7 @@
  export INCLUDE	:=	$(foreach dir,$(INCLUDES), -I$(CURDIR)/$(dir)) \
  					$(foreach dir,$(LIBDIRS),-I$(dir)/include) \
@@ -34348,7 +34372,7 @@ diff -burN psl1ght/samples/network/ps3load/Makefile psl1ght-PS3/samples/network/
  
 diff -burN psl1ght/samples/network/ps3load/source/main.c psl1ght-PS3/samples/network/ps3load/source/main.c
 --- psl1ght/samples/network/ps3load/source/main.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/network/ps3load/source/main.c	2014-06-27 22:15:27.089300090 -0400
++++ psl1ght-PS3/samples/network/ps3load/source/main.c	2014-07-04 16:38:29.229078081 -0400
 @@ -45,7 +45,7 @@
  
  static vu32 running = 0;
@@ -34360,7 +34384,7 @@ diff -burN psl1ght/samples/network/ps3load/source/main.c psl1ght-PS3/samples/net
  static volatile int listen_socket = -1;
 diff -burN psl1ght/samples/sys/msgdialog/source/main.c psl1ght-PS3/samples/sys/msgdialog/source/main.c
 --- psl1ght/samples/sys/msgdialog/source/main.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/sys/msgdialog/source/main.c	2014-06-27 22:15:27.089300090 -0400
++++ psl1ght-PS3/samples/sys/msgdialog/source/main.c	2014-07-04 16:38:29.230078081 -0400
 @@ -79,7 +79,7 @@
  
  	msgDialogAbort();
@@ -34381,7 +34405,7 @@ diff -burN psl1ght/samples/sys/msgdialog/source/main.c psl1ght-PS3/samples/sys/m
  		msgDialogOpen2(dialogType,"Your answer was YES",dialog_handler,NULL,NULL);
 diff -burN psl1ght/samples/sys/save/include/rsxutil.h psl1ght-PS3/samples/sys/save/include/rsxutil.h
 --- psl1ght/samples/sys/save/include/rsxutil.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/sys/save/include/rsxutil.h	2014-06-27 22:15:27.089300090 -0400
++++ psl1ght-PS3/samples/sys/save/include/rsxutil.h	2014-07-04 16:38:29.230078081 -0400
 @@ -18,7 +18,7 @@
    int width;
    int id;
@@ -34393,7 +34417,7 @@ diff -burN psl1ght/samples/sys/save/include/rsxutil.h psl1ght-PS3/samples/sys/sa
  
 diff -burN psl1ght/samples/sys/save/source/rsxutil.c psl1ght-PS3/samples/sys/save/source/rsxutil.c
 --- psl1ght/samples/sys/save/source/rsxutil.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/samples/sys/save/source/rsxutil.c	2014-06-27 22:15:27.090300090 -0400
++++ psl1ght-PS3/samples/sys/save/source/rsxutil.c	2014-07-04 16:38:29.231078081 -0400
 @@ -37,7 +37,7 @@
  {
    if (gcmSetFlip (context, buffer) == 0) {
@@ -34414,7 +34438,7 @@ diff -burN psl1ght/samples/sys/save/source/rsxutil.c psl1ght-PS3/samples/sys/sav
    depth_buffer = (u32 *) rsxMemalign (64, (res.height * depth_pitch)* 2);
 diff -burN psl1ght/tools/cgcomp/include/nvfx_shader.h psl1ght-PS3/tools/cgcomp/include/nvfx_shader.h
 --- psl1ght/tools/cgcomp/include/nvfx_shader.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/tools/cgcomp/include/nvfx_shader.h	2014-06-27 22:15:27.090300090 -0400
++++ psl1ght-PS3/tools/cgcomp/include/nvfx_shader.h	2014-07-04 16:38:29.231078081 -0400
 @@ -8,7 +8,7 @@
  /* this will resolve to either the NV30 or the NV40 version
   * depending on the current hardware */
@@ -34444,7 +34468,7 @@ diff -burN psl1ght/tools/cgcomp/include/nvfx_shader.h psl1ght-PS3/tools/cgcomp/i
  #  define NVFX_FP_REG_TYPE_TEMP   0
 diff -burN psl1ght/tools/cgcomp/source/compiler.cpp psl1ght-PS3/tools/cgcomp/source/compiler.cpp
 --- psl1ght/tools/cgcomp/source/compiler.cpp	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/tools/cgcomp/source/compiler.cpp	2014-06-27 22:15:27.090300090 -0400
++++ psl1ght-PS3/tools/cgcomp/source/compiler.cpp	2014-07-04 16:38:29.232078081 -0400
 @@ -101,7 +101,7 @@
  	Prepare(pParser);
  
@@ -34456,7 +34480,7 @@ diff -burN psl1ght/tools/cgcomp/source/compiler.cpp psl1ght-PS3/tools/cgcomp/sou
  		insns_pos.push_back(m_nInstructions);
 diff -burN psl1ght/tools/cgcomp/source/fpparser.cpp psl1ght-PS3/tools/cgcomp/source/fpparser.cpp
 --- psl1ght/tools/cgcomp/source/fpparser.cpp	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/tools/cgcomp/source/fpparser.cpp	2014-06-27 22:15:27.091300090 -0400
++++ psl1ght-PS3/tools/cgcomp/source/fpparser.cpp	2014-07-04 16:38:29.232078081 -0400
 @@ -108,7 +108,7 @@
     { "UP4UB", OPCODE_UP4UB, INPUT_1S, OUTPUT_V,            _C | _S },
     { "X2D", OPCODE_X2D, INPUT_3V, OUTPUT_V, _R | _H |      _C | _S },
@@ -34477,7 +34501,7 @@ diff -burN psl1ght/tools/cgcomp/source/fpparser.cpp psl1ght-PS3/tools/cgcomp/sou
  
 diff -burN psl1ght/tools/cgcomp/source/vpparser.cpp psl1ght-PS3/tools/cgcomp/source/vpparser.cpp
 --- psl1ght/tools/cgcomp/source/vpparser.cpp	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/tools/cgcomp/source/vpparser.cpp	2014-06-27 22:15:27.091300090 -0400
++++ psl1ght-PS3/tools/cgcomp/source/vpparser.cpp	2014-07-04 16:38:29.233078081 -0400
 @@ -62,7 +62,7 @@
  	{ "TXL", OPCODE_TXL,{ 0, 1,-1},2,false },
  	{ "TXP", OPCODE_TXP,{ 0, 1,-1},2,false },
@@ -34489,7 +34513,7 @@ diff -burN psl1ght/tools/cgcomp/source/vpparser.cpp psl1ght-PS3/tools/cgcomp/sou
  static const u32 VP_OPCODES_CNT = sizeof(vp_opcodes)/sizeof(struct _opcode);
 diff -burN psl1ght/tools/generic/bin2s.c psl1ght-PS3/tools/generic/bin2s.c
 --- psl1ght/tools/generic/bin2s.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/tools/generic/bin2s.c	2014-06-27 22:15:27.091300090 -0400
++++ psl1ght-PS3/tools/generic/bin2s.c	2014-07-04 16:38:29.233078081 -0400
 @@ -46,10 +46,11 @@
  #include <ctype.h>
  
@@ -34519,7 +34543,7 @@ diff -burN psl1ght/tools/generic/bin2s.c psl1ght-PS3/tools/generic/bin2s.c
  	int linelen;
 diff -burN psl1ght/tools/geohot/include/aes_omac.h psl1ght-PS3/tools/geohot/include/aes_omac.h
 --- psl1ght/tools/geohot/include/aes_omac.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/tools/geohot/include/aes_omac.h	2014-06-27 22:15:27.092300090 -0400
++++ psl1ght-PS3/tools/geohot/include/aes_omac.h	2014-07-04 16:38:29.233078081 -0400
 @@ -1,5 +1,6 @@
 -// I mean if OpenSSL doesn't include it...
 -//  released under GPLv3, see http://gplv3.fsf.org/
@@ -34531,7 +34555,7 @@ diff -burN psl1ght/tools/geohot/include/aes_omac.h psl1ght-PS3/tools/geohot/incl
    int i;
 diff -burN psl1ght/tools/geohot/include/keys.h psl1ght-PS3/tools/geohot/include/keys.h
 --- psl1ght/tools/geohot/include/keys.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/tools/geohot/include/keys.h	2014-06-27 22:15:27.092300090 -0400
++++ psl1ght-PS3/tools/geohot/include/keys.h	2014-07-04 16:38:29.234078081 -0400
 @@ -1,4 +1,4 @@
 -// no application symmetric keys are included
 +/* no application symmetric keys are included */
@@ -34540,7 +34564,7 @@ diff -burN psl1ght/tools/geohot/include/keys.h psl1ght-PS3/tools/geohot/include/
  u8 appold_n[] = {0xB0,0xE7,0xCA,0xFF,0xC8,0xDE,0xEE,0x8A,0x55,0xA3,0x05,0x0D,0x80,0x9A,0xDF,0xE3,0x8F,0xA0,0x1D,0xAB};
 diff -burN psl1ght/tools/geohot/include/oddkeys.h psl1ght-PS3/tools/geohot/include/oddkeys.h
 --- psl1ght/tools/geohot/include/oddkeys.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/tools/geohot/include/oddkeys.h	2014-06-27 22:15:27.092300090 -0400
++++ psl1ght-PS3/tools/geohot/include/oddkeys.h	2014-07-04 16:38:29.234078081 -0400
 @@ -1,7 +1,8 @@
 -// The NPDRM decryption keys are not included anywhere
 -// I do have them, but see no purpose in releasing them
@@ -34556,7 +34580,7 @@ diff -burN psl1ght/tools/geohot/include/oddkeys.h psl1ght-PS3/tools/geohot/inclu
  
 diff -burN psl1ght/tools/geohot/include/self.h psl1ght-PS3/tools/geohot/include/self.h
 --- psl1ght/tools/geohot/include/self.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/tools/geohot/include/self.h	2014-06-27 22:15:27.093300091 -0400
++++ psl1ght-PS3/tools/geohot/include/self.h	2014-07-04 16:38:29.235078081 -0400
 @@ -1,42 +1,43 @@
 -// SELF structs
 -//  released under GPLv3, see http://gplv3.fsf.org/
@@ -34692,7 +34716,7 @@ diff -burN psl1ght/tools/geohot/include/self.h psl1ght-PS3/tools/geohot/include/
  } Self_Segment;
 diff -burN psl1ght/tools/geohot/include/sha1_hmac.h psl1ght-PS3/tools/geohot/include/sha1_hmac.h
 --- psl1ght/tools/geohot/include/sha1_hmac.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/tools/geohot/include/sha1_hmac.h	2014-06-27 22:15:27.093300091 -0400
++++ psl1ght-PS3/tools/geohot/include/sha1_hmac.h	2014-07-04 16:38:29.235078081 -0400
 @@ -1,5 +1,6 @@
 -// lol, I didn't know how real HMACs worked when I reversed this
 -//  released under GPLv3, see http://gplv3.fsf.org/
@@ -34704,7 +34728,7 @@ diff -burN psl1ght/tools/geohot/include/sha1_hmac.h psl1ght-PS3/tools/geohot/inc
  
 diff -burN psl1ght/tools/geohot/make_self.c psl1ght-PS3/tools/geohot/make_self.c
 --- psl1ght/tools/geohot/make_self.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/tools/geohot/make_self.c	2014-06-27 22:15:27.094300091 -0400
++++ psl1ght-PS3/tools/geohot/make_self.c	2014-07-04 16:38:29.236078081 -0400
 @@ -1,6 +1,7 @@
 -// make_self_npdrm by geohot
 -// part of geohot's awesome tools for the PS3
@@ -35055,7 +35079,7 @@ diff -burN psl1ght/tools/geohot/make_self.c psl1ght-PS3/tools/geohot/make_self.c
    fclose(output_self_file);
 diff -burN psl1ght/tools/geohot/package_finalize.c psl1ght-PS3/tools/geohot/package_finalize.c
 --- psl1ght/tools/geohot/package_finalize.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/tools/geohot/package_finalize.c	2014-06-27 22:15:27.094300091 -0400
++++ psl1ght-PS3/tools/geohot/package_finalize.c	2014-07-04 16:38:29.236078081 -0400
 @@ -1,6 +1,7 @@
 -// package_finalize by geohot
 -// part of geohot's awesome tools for the PS3
@@ -35103,7 +35127,7 @@ diff -burN psl1ght/tools/geohot/package_finalize.c psl1ght-PS3/tools/geohot/pack
    fclose(g);
 diff -burN psl1ght/tools/ps3py/crypt.c psl1ght-PS3/tools/ps3py/crypt.c
 --- psl1ght/tools/ps3py/crypt.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/tools/ps3py/crypt.c	2014-06-27 22:15:27.094300091 -0400
++++ psl1ght-PS3/tools/ps3py/crypt.c	2014-07-04 16:38:29.237078081 -0400
 @@ -42,7 +42,7 @@
  		if (bytes_to_dump > 0x10) 
  			bytes_to_dump = 0x10;
