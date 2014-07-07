@@ -11204,7 +11204,7 @@ diff -burN psl1ght/ppu/sprx/libnet/init.c psl1ght-PS3/ppu/sprx/libnet/init.c
  
 diff -burN psl1ght/ppu/sprx/libnet/socket.c psl1ght-PS3/ppu/sprx/libnet/socket.c
 --- psl1ght/ppu/sprx/libnet/socket.c	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/sprx/libnet/socket.c	2014-07-07 18:00:20.422465470 -0400
++++ psl1ght-PS3/ppu/sprx/libnet/socket.c	2014-07-07 18:04:52.105475127 -0400
 @@ -100,16 +100,16 @@
  	[NET_EDQUOT]			= EDQUOT,
  	[NET_ESTALE]			= ESTALE,
@@ -11229,7 +11229,7 @@ diff -burN psl1ght/ppu/sprx/libnet/socket.c psl1ght-PS3/ppu/sprx/libnet/socket.c
  	[NET_EIDRM]				= EIDRM,
  	[NET_ENOMSG]			= ENOMSG,
  	[NET_EOVERFLOW]			= EOVERFLOW,
-@@ -383,6 +383,14 @@
+@@ -383,6 +383,16 @@
  	return copyhost(ret);
  }
  
@@ -11239,12 +11239,14 @@ diff -burN psl1ght/ppu/sprx/libnet/socket.c psl1ght-PS3/ppu/sprx/libnet/socket.c
 +	/* This is just to prevent programs and libraries */
 +	/* from erroring out during compile time. */
 +	strncpy(name, "ps3", len);
++
++	return 0;
 +}
 +
  struct hostent* gethostbyname(const char *name)
  {
  	if(!LIBNET_INITIALZED) {
-@@ -457,10901 +465,10901 @@
+@@ -457,10901 +467,10901 @@
  
  static struct pvt_servent IANAports[] = {
  #ifdef USE_IANA_WELL_KNOWN_PORTS
