@@ -53,7 +53,7 @@ cd ${GCC}/build-ppu
     --disable-shared \
     --disable-win32-registry \
     --enable-languages="c,c++" \
-    --enable-long-double-128 \
+    --with-long-double-128 \
     --enable-lto \
     --enable-threads \
     --with-cpu="cell" \
