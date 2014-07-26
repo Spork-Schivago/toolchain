@@ -21,7 +21,20 @@ Have a look at **PACKAGES** to see what's included and check out **STATUS** to t
 
   If your programs no longer compile, the code or Makefile might need to be modified.  You might need to switch the
   order of the libraries around.  For example, for the PSChannel homebrew application, I had to modify the Makefile.
-  Under the LIBS section, I had to move -liberty to after -lfontconfig and I needed to add -ltiff to the end.  
+  Under the LIBS section, I had to change this line:  
+  -lsysutil -levas -leina -lescape -lnet -lsysmodule -liberty -leet \
+  -lembryo -llua -lm -lfontconfig -lcares -lexpat -lSDL \
+  
+  to this:  
+  -lsysutil -levas -lEGL -lGL -leina -lescape -lnet -lsysmodule -leet \
+  -lembryo -llua -lm -lfontconfig -liberty -lcares -lexpat -lSDL \  
+  
+  and this line:  
+  -lfreetype -lsysfs -lpolarssl  
+  
+  to this:
+  -lfreetype -lsysfs -lpolarssl -ltiff -lpixman-1  
+
   For the CFLAGS I needed to add -I${PS3DEV}/portlibs/ppu/lib/libzip/include so it'd find the zipconf.h header file.
   That's the correct installation location for the zipconf.h header.
 
