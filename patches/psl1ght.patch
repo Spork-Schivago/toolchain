@@ -10664,6 +10664,25 @@ diff -burN psl1ght/data_rules psl1ght-PS3/data_rules
  
  MACHDEP	=	-mhard-float -fmodulo-sched -ffunction-sections -fdata-sections
  
+diff -burN psl1ght/ppu/crt/crt1.c psl1ght-PS3/ppu/crt/crt1.c
+--- psl1ght/ppu/crt/crt1.c	2013-01-07 17:10:43.000000000 -0500
++++ psl1ght-PS3/ppu/crt/crt1.c	2014-07-27 19:56:47.121539061 -0400
+@@ -21,6 +21,7 @@
+ extern caddr_t __librt_sbrk_r(struct _reent *ptr,ptrdiff_t incr);
+ extern int __librt_chmod_r(struct _reent *r,const char *path,mode_t mode);
+ extern int __librt_isatty_r(struct _reent *r,int fd);
++extern int __librt_unlink_r(struct _reent *r,const char *path);
+ 
+ extern int __librt_mkdir_r(struct _reent *r,const char *path,mode_t mode);
+ extern DIR* __librt_opendir_r(struct _reent *r,const char *path);
+@@ -64,6 +65,7 @@
+ 	__syscalls.stat64_r = __librt_stat64_r;
+ 	__syscalls.chmod_r = __librt_chmod_r;
+ 	__syscalls.isatty_r = __librt_isatty_r;
++	__syscalls.unlink_r = __librt_unlink_r;
+ 
+ 	__syscalls.mkdir_r = __librt_mkdir_r;
+ 	__syscalls.opendir_r = __librt_opendir_r;
 diff -burN psl1ght/ppu/include/io/move.h psl1ght-PS3/ppu/include/io/move.h
 --- psl1ght/ppu/include/io/move.h	2013-01-07 17:10:43.000000000 -0500
 +++ psl1ght-PS3/ppu/include/io/move.h	2014-07-27 19:47:43.639519744 -0400
@@ -11217,6 +11236,40 @@ diff -burN psl1ght/ppu/librsx/commands.c psl1ght-PS3/ppu/librsx/commands.c
  void rsxSetTransferScaleSwizzle(gcmContextData *context,const gcmTransferScale *scale,const gcmTransferSwizzle *swizzle)
  {
  	RSX_CONTEXT_CURRENT_BEGIN(20);
+diff -burN psl1ght/ppu/librt/Makefile psl1ght-PS3/ppu/librt/Makefile
+--- psl1ght/ppu/librt/Makefile	2013-01-07 17:10:43.000000000 -0500
++++ psl1ght-PS3/ppu/librt/Makefile	2014-07-27 19:57:25.354540420 -0400
+@@ -45,7 +45,7 @@
+ OBJS		:= \
+ 			sbrk.o exit.o close.o lseek.o read.o open.o sleep.o write.o fstat.o \
+ 			socket.o lock.o dirent.o mkdir.o times.o umask.o lv2errno.o heap.o \
+-			chmod.o rmdir.o isatty.o gettod.o settod.o
++			chmod.o rmdir.o isatty.o gettod.o settod.o unlink.o
+ 
+ all: ppu
+ 
+diff -burN psl1ght/ppu/librt/unlink.c psl1ght-PS3/ppu/librt/unlink.c
+--- psl1ght/ppu/librt/unlink.c	1969-12-31 19:00:00.000000000 -0500
++++ psl1ght-PS3/ppu/librt/unlink.c	2014-07-27 19:58:39.162543043 -0400
+@@ -0,0 +1,18 @@
++#include <stdio.h>
++#include <fcntl.h>
++#include <_ansi.h>
++#include <_syslist.h>
++#include <sys/reent.h>
++#include <sys/errno.h>
++#include <sys/types.h>
++#include <sys/lv2errno.h>
++
++#include <sys/file.h>
++
++int
++_DEFUN(__librt_unlink_r,(r,path),
++	struct _reent *r _AND
++	const char *path)
++{
++	return lv2errno_r(r,sysLv2FsUnlink(path));
++}
 diff -burN psl1ght/ppu/sprx/libjpgdec/jpgdec.c psl1ght-PS3/ppu/sprx/libjpgdec/jpgdec.c
 --- psl1ght/ppu/sprx/libjpgdec/jpgdec.c	2013-01-07 17:10:43.000000000 -0500
 +++ psl1ght-PS3/ppu/sprx/libjpgdec/jpgdec.c	2014-07-27 19:47:43.645519744 -0400
