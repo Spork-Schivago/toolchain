@@ -10786,13 +10786,11 @@ diff -burN psl1ght/ppu/include/net/netdb.h psl1ght-PS3/ppu/include/net/netdb.h
  
 diff -burN psl1ght/ppu/include/net/net.h psl1ght-PS3/ppu/include/net/net.h
 --- psl1ght/ppu/include/net/net.h	2013-01-07 17:10:43.000000000 -0500
-+++ psl1ght-PS3/ppu/include/net/net.h	2014-07-27 19:50:51.409526418 -0400
-@@ -3,7 +3,8 @@
- 
++++ psl1ght-PS3/ppu/include/net/net.h	2014-07-29 19:18:59.543600349 -0400
+@@ -4,6 +4,7 @@
  #include <net/socket.h>
  #include <net/select.h>
--#include <net/poll.h>
-+#include <net/pll.h>
+ #include <net/poll.h>
 +#include <netinet/in.h>
  
  #define	NET_EPERM			1
@@ -10838,6 +10836,11 @@ diff -burN psl1ght/ppu/include/net/socket.h psl1ght-PS3/ppu/include/net/socket.h
  #include <ppu-types.h>
  
  typedef u32 socklen_t;
+diff -burN psl1ght/ppu/include/poll.h psl1ght-PS3/ppu/include/poll.h
+--- psl1ght/ppu/include/poll.h	1969-12-31 19:00:00.000000000 -0500
++++ psl1ght-PS3/ppu/include/poll.h	2014-07-29 19:20:09.311602829 -0400
+@@ -0,0 +1 @@
++#include <net/poll.h>
 diff -burN psl1ght/ppu/include/ppu-types.h psl1ght-PS3/ppu/include/ppu-types.h
 --- psl1ght/ppu/include/ppu-types.h	2013-01-07 17:10:43.000000000 -0500
 +++ psl1ght-PS3/ppu/include/ppu-types.h	2014-07-27 19:47:43.641519744 -0400
