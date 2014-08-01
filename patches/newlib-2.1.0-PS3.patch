@@ -12657,7 +12657,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/lv2/sys/lock.h newlib-2.1.0-PS3/newlib/l
 diff -burN newlib-2.1.0/newlib/libc/sys/lv2/sys/syscalls.h newlib-2.1.0-PS3/newlib/libc/sys/lv2/sys/syscalls.h
 --- newlib-2.1.0/newlib/libc/sys/lv2/sys/syscalls.h	1969-12-31 19:00:00.000000000 -0500
 +++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/sys/syscalls.h	2014-07-07 20:42:52.684812098 -0400
-@@ -0,0 +1,73 @@
+@@ -0,0 +1,74 @@
 +#ifndef __SYSCALLS_H__
 +#define __SYSCALLS_H__
 +
@@ -12690,6 +12690,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/lv2/sys/syscalls.h newlib-2.1.0-PS3/newl
 +	int (*fsync_r)(struct _reent *r,int fd);
 +	int (*link_r)(struct _reent *r,const char *old,const char *new);
 +	int (*unlink_r)(struct _reent *r,const char *name);
++	int (*access_r)(struct _reent *r,const char *name,int amode);
 +	int (*chmod_r)(struct _reent *r,const char *path,mode_t mode);
 +	int (*rename_r)(struct _reent *r,const char *old,const char *new);
 +	int (*utime_r)(struct _reent *r,const char *path,const struct utimbuf *times);
