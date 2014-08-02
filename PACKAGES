@@ -1,16 +1,15 @@
   Toolchain:
-  binutils-2.23.2
-  gcc-4.8.2
-  newlib-2.0.0
-  gdb-7.6.1
+  binutils-2.24
+  gcc-4.9.0
+  newlib-2.1.0
+  gdb-7.7.1
   psl1ght-v2
-  a ppu version of libiberty
-  a not working so well ppu version of libbfd
+  a ppu version of libiberty and of libbfd
 
   PS3 Libraries:
   zlib-1.2.8
-  libpng-1.6.6
-  jpeg-v9
+  libpng-1.6.12
+  jpeg-v9a
   freetype-2.5.0.1
   pixman-0.32.2
   cairo-1.12.16
@@ -27,13 +26,14 @@
   updated SDL1 libraries
   SDL2-2.0.1
   SDL2 libraries
-  polarssl-1.3.2
-  libcurl-7.33.0
+  polarssl-1.3.7
+  libcurl-7.37.0
   faad2-2.7
   libtheora-1.1.1
   libintl-lite-0.5
   Wargio's NoRSX-0.3.1
-  libjson-0.11
+  RSXGL
+  libjson-0.12
 
   EFL Libraries: 
   escape
