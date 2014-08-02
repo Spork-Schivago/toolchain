@@ -1,6 +1,6 @@
 diff -burN newlib-2.1.0/libgloss/configure newlib-2.1.0-PS3/libgloss/configure
 --- newlib-2.1.0/libgloss/configure	2013-07-16 03:48:53.000000000 -0400
-+++ newlib-2.1.0-PS3/libgloss/configure	2014-07-07 20:42:52.656812097 -0400
++++ newlib-2.1.0-PS3/libgloss/configure	2014-08-01 21:40:01.220113934 -0400
 @@ -2393,6 +2393,8 @@
  
  config_libnosys=true
@@ -31,7 +31,7 @@ diff -burN newlib-2.1.0/libgloss/configure newlib-2.1.0-PS3/libgloss/configure
  ac_config_commands="$ac_config_commands depfiles"
 diff -burN newlib-2.1.0/libgloss/configure.in newlib-2.1.0-PS3/libgloss/configure.in
 --- newlib-2.1.0/libgloss/configure.in	2013-07-16 03:48:53.000000000 -0400
-+++ newlib-2.1.0-PS3/libgloss/configure.in	2014-07-07 20:42:52.656812097 -0400
++++ newlib-2.1.0-PS3/libgloss/configure.in	2014-08-01 21:40:01.220113934 -0400
 @@ -2,6 +2,7 @@
  AC_PREREQ(2.59)
  AC_INIT([libgloss],[LIBGLOSS_VERSION])
@@ -71,7 +71,7 @@ diff -burN newlib-2.1.0/libgloss/configure.in newlib-2.1.0-PS3/libgloss/configur
  AC_SUBST(AS)
 diff -burN newlib-2.1.0/libgloss/libsysbase/abort.c newlib-2.1.0-PS3/libgloss/libsysbase/abort.c
 --- newlib-2.1.0/libgloss/libsysbase/abort.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/abort.c	2014-07-07 20:42:52.657812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/abort.c	2014-08-01 21:40:01.221113934 -0400
 @@ -0,0 +1,8 @@
 +#include <stdlib.h>
 +#include <unistd.h>
@@ -83,7 +83,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/abort.c newlib-2.1.0-PS3/libgloss/li
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/acconfig.h newlib-2.1.0-PS3/libgloss/libsysbase/acconfig.h
 --- newlib-2.1.0/libgloss/libsysbase/acconfig.h	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/acconfig.h	2014-07-07 20:42:52.657812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/acconfig.h	2014-08-01 21:40:01.221113934 -0400
 @@ -0,0 +1,29 @@
 +/* Name of package.  */
 +#undef PACKAGE
@@ -116,7 +116,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/acconfig.h newlib-2.1.0-PS3/libgloss
 +#undef __SYMBOL_PREFIX
 diff -burN newlib-2.1.0/libgloss/libsysbase/aclocal.m4 newlib-2.1.0-PS3/libgloss/libsysbase/aclocal.m4
 --- newlib-2.1.0/libgloss/libsysbase/aclocal.m4	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/aclocal.m4	2014-07-07 20:42:52.658812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/aclocal.m4	2014-08-01 21:40:01.221113934 -0400
 @@ -0,0 +1,344 @@
 +# generated automatically by aclocal 1.9.5 -*- Autoconf -*-
 +
@@ -464,7 +464,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/aclocal.m4 newlib-2.1.0-PS3/libgloss
 +m4_include([../acinclude.m4])
 diff -burN newlib-2.1.0/libgloss/libsysbase/chdir.c newlib-2.1.0-PS3/libgloss/libsysbase/chdir.c
 --- newlib-2.1.0/libgloss/libsysbase/chdir.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/chdir.c	2014-07-07 20:42:52.658812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/chdir.c	2014-08-01 21:40:01.222113934 -0400
 @@ -0,0 +1,32 @@
 +#include <unistd.h>
 +#include <reent.h>
@@ -500,7 +500,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/chdir.c newlib-2.1.0-PS3/libgloss/li
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/chmod.c newlib-2.1.0-PS3/libgloss/libsysbase/chmod.c
 --- newlib-2.1.0/libgloss/libsysbase/chmod.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/chmod.c	2014-07-07 20:42:52.658812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/chmod.c	2014-08-01 21:40:01.222113934 -0400
 @@ -0,0 +1,21 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -525,7 +525,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/chmod.c newlib-2.1.0-PS3/libgloss/li
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/close.c newlib-2.1.0-PS3/libgloss/libsysbase/close.c
 --- newlib-2.1.0/libgloss/libsysbase/close.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/close.c	2014-07-07 20:42:52.658812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/close.c	2014-08-01 21:40:01.222113934 -0400
 @@ -0,0 +1,25 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -554,7 +554,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/close.c newlib-2.1.0-PS3/libgloss/li
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/closedir.c newlib-2.1.0-PS3/libgloss/libsysbase/closedir.c
 --- newlib-2.1.0/libgloss/libsysbase/closedir.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/closedir.c	2014-07-07 20:42:52.658812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/closedir.c	2014-08-01 21:40:01.222113934 -0400
 @@ -0,0 +1,17 @@
 +#include <unistd.h>
 +#include <reent.h>
@@ -575,7 +575,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/closedir.c newlib-2.1.0-PS3/libgloss
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/config.h.in newlib-2.1.0-PS3/libgloss/libsysbase/config.h.in
 --- newlib-2.1.0/libgloss/libsysbase/config.h.in	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/config.h.in	2014-07-07 20:42:52.659812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/config.h.in	2014-08-01 21:40:01.222113934 -0400
 @@ -0,0 +1,25 @@
 +/* config.h.in.  Generated automatically from configure.in by autoheader.  */
 +
@@ -604,7 +604,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/config.h.in newlib-2.1.0-PS3/libglos
 +#undef __SYMBOL_PREFIX
 diff -burN newlib-2.1.0/libgloss/libsysbase/configure newlib-2.1.0-PS3/libgloss/libsysbase/configure
 --- newlib-2.1.0/libgloss/libsysbase/configure	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/configure	2014-07-07 20:42:52.661812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/configure	2014-08-01 21:40:01.225113935 -0400
 @@ -0,0 +1,3555 @@
 +#! /bin/sh
 +# Guess values for system-dependent variables and create Makefiles.
@@ -4163,7 +4163,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/configure newlib-2.1.0-PS3/libgloss/
 +
 diff -burN newlib-2.1.0/libgloss/libsysbase/configure.in newlib-2.1.0-PS3/libgloss/libsysbase/configure.in
 --- newlib-2.1.0/libgloss/libsysbase/configure.in	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/configure.in	2014-07-07 20:42:52.661812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/configure.in	2014-08-01 21:40:01.225113935 -0400
 @@ -0,0 +1,207 @@
 +# Copyright (c) 1995, 1996 Cygnus Support
 +#
@@ -4374,7 +4374,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/configure.in newlib-2.1.0-PS3/libglo
 +
 diff -burN newlib-2.1.0/libgloss/libsysbase/dup.c newlib-2.1.0-PS3/libgloss/libsysbase/dup.c
 --- newlib-2.1.0/libgloss/libsysbase/dup.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/dup.c	2014-07-07 21:03:54.626856952 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/dup.c	2014-08-01 21:40:01.225113935 -0400
 @@ -0,0 +1,11 @@
 +#include <errno.h>
 +#include <fcntl.h>
@@ -4389,7 +4389,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/dup.c newlib-2.1.0-PS3/libgloss/libs
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/environ.c newlib-2.1.0-PS3/libgloss/libsysbase/environ.c
 --- newlib-2.1.0/libgloss/libsysbase/environ.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/environ.c	2014-07-07 20:42:52.662812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/environ.c	2014-08-01 21:40:01.226113935 -0400
 @@ -0,0 +1,6 @@
 +/*
 + * Version of environ for no OS
@@ -4399,7 +4399,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/environ.c newlib-2.1.0-PS3/libgloss/
 +char **environ = __env;
 diff -burN newlib-2.1.0/libgloss/libsysbase/execve.c newlib-2.1.0-PS3/libgloss/libsysbase/execve.c
 --- newlib-2.1.0/libgloss/libsysbase/execve.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/execve.c	2014-07-07 20:42:52.662812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/execve.c	2014-08-01 21:40:01.226113935 -0400
 @@ -0,0 +1,27 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -4430,7 +4430,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/execve.c newlib-2.1.0-PS3/libgloss/l
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/_exit.c newlib-2.1.0-PS3/libgloss/libsysbase/_exit.c
 --- newlib-2.1.0/libgloss/libsysbase/_exit.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/_exit.c	2014-07-07 20:42:52.662812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/_exit.c	2014-08-01 21:40:01.226113935 -0400
 @@ -0,0 +1,15 @@
 +#include <limits.h>
 +#include "config.h"
@@ -4449,7 +4449,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/_exit.c newlib-2.1.0-PS3/libgloss/li
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/fork.c newlib-2.1.0-PS3/libgloss/libsysbase/fork.c
 --- newlib-2.1.0/libgloss/libsysbase/fork.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/fork.c	2014-07-07 20:42:52.662812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/fork.c	2014-08-01 21:40:01.226113935 -0400
 @@ -0,0 +1,18 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -4471,7 +4471,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/fork.c newlib-2.1.0-PS3/libgloss/lib
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/fstat64.c newlib-2.1.0-PS3/libgloss/libsysbase/fstat64.c
 --- newlib-2.1.0/libgloss/libsysbase/fstat64.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/fstat64.c	2014-07-07 20:42:52.662812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/fstat64.c	2014-08-01 21:40:01.227113935 -0400
 @@ -0,0 +1,28 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -4503,7 +4503,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/fstat64.c newlib-2.1.0-PS3/libgloss/
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/fstat.c newlib-2.1.0-PS3/libgloss/libsysbase/fstat.c
 --- newlib-2.1.0/libgloss/libsysbase/fstat.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/fstat.c	2014-07-07 20:42:52.663812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/fstat.c	2014-08-01 21:40:01.227113935 -0400
 @@ -0,0 +1,28 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -4535,7 +4535,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/fstat.c newlib-2.1.0-PS3/libgloss/li
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/fsync.c newlib-2.1.0-PS3/libgloss/libsysbase/fsync.c
 --- newlib-2.1.0/libgloss/libsysbase/fsync.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/fsync.c	2014-07-07 20:42:52.663812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/fsync.c	2014-08-01 21:40:01.227113935 -0400
 @@ -0,0 +1,20 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -4559,7 +4559,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/fsync.c newlib-2.1.0-PS3/libgloss/li
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/ftruncate.c newlib-2.1.0-PS3/libgloss/libsysbase/ftruncate.c
 --- newlib-2.1.0/libgloss/libsysbase/ftruncate.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/ftruncate.c	2014-07-07 20:42:52.663812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/ftruncate.c	2014-08-01 21:40:01.227113935 -0400
 @@ -0,0 +1,21 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -4584,7 +4584,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/ftruncate.c newlib-2.1.0-PS3/libglos
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/getpid.c newlib-2.1.0-PS3/libgloss/libsysbase/getpid.c
 --- newlib-2.1.0/libgloss/libsysbase/getpid.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/getpid.c	2014-07-07 20:42:52.663812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/getpid.c	2014-08-01 21:40:01.227113935 -0400
 @@ -0,0 +1,22 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -4610,7 +4610,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/getpid.c newlib-2.1.0-PS3/libgloss/l
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/getrusage.c newlib-2.1.0-PS3/libgloss/libsysbase/getrusage.c
 --- newlib-2.1.0/libgloss/libsysbase/getrusage.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/getrusage.c	2014-07-07 20:42:52.663812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/getrusage.c	2014-08-01 21:40:01.227113935 -0400
 @@ -0,0 +1,21 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -4635,7 +4635,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/getrusage.c newlib-2.1.0-PS3/libglos
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/gettod.c newlib-2.1.0-PS3/libgloss/libsysbase/gettod.c
 --- newlib-2.1.0/libgloss/libsysbase/gettod.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/gettod.c	2014-07-07 20:42:52.664812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/gettod.c	2014-08-01 21:40:01.228113935 -0400
 @@ -0,0 +1,30 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -4669,7 +4669,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/gettod.c newlib-2.1.0-PS3/libgloss/l
 +		
 diff -burN newlib-2.1.0/libgloss/libsysbase/glob.c newlib-2.1.0-PS3/libgloss/libsysbase/glob.c
 --- newlib-2.1.0/libgloss/libsysbase/glob.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/glob.c	2014-07-07 20:42:52.664812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/glob.c	2014-08-01 21:40:01.228113935 -0400
 @@ -0,0 +1,9 @@
 +#include <glob.h>
 +#include <errno.h>
@@ -4682,7 +4682,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/glob.c newlib-2.1.0-PS3/libgloss/lib
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/globfree.c newlib-2.1.0-PS3/libgloss/libsysbase/globfree.c
 --- newlib-2.1.0/libgloss/libsysbase/globfree.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/globfree.c	2014-07-07 20:42:52.664812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/globfree.c	2014-08-01 21:40:01.228113935 -0400
 @@ -0,0 +1,6 @@
 +#include <glob.h>
 +
@@ -4692,7 +4692,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/globfree.c newlib-2.1.0-PS3/libgloss
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/isatty.c newlib-2.1.0-PS3/libgloss/libsysbase/isatty.c
 --- newlib-2.1.0/libgloss/libsysbase/isatty.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/isatty.c	2014-07-07 20:42:52.664812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/isatty.c	2014-08-01 21:40:01.228113935 -0400
 @@ -0,0 +1,24 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -4720,7 +4720,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/isatty.c newlib-2.1.0-PS3/libgloss/l
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/kill.c newlib-2.1.0-PS3/libgloss/libsysbase/kill.c
 --- newlib-2.1.0/libgloss/libsysbase/kill.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/kill.c	2014-07-07 20:42:52.664812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/kill.c	2014-08-01 21:40:01.228113935 -0400
 @@ -0,0 +1,21 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -4745,7 +4745,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/kill.c newlib-2.1.0-PS3/libgloss/lib
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/link.c newlib-2.1.0-PS3/libgloss/libsysbase/link.c
 --- newlib-2.1.0/libgloss/libsysbase/link.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/link.c	2014-07-07 20:42:52.665812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/link.c	2014-08-01 21:40:01.229113935 -0400
 @@ -0,0 +1,26 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -4775,7 +4775,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/link.c newlib-2.1.0-PS3/libgloss/lib
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/lock.c newlib-2.1.0-PS3/libgloss/libsysbase/lock.c
 --- newlib-2.1.0/libgloss/libsysbase/lock.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/lock.c	2014-07-07 20:42:52.665812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/lock.c	2014-08-01 21:40:01.229113935 -0400
 @@ -0,0 +1,64 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -4843,7 +4843,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/lock.c newlib-2.1.0-PS3/libgloss/lib
 +
 diff -burN newlib-2.1.0/libgloss/libsysbase/lseek64.c newlib-2.1.0-PS3/libgloss/libsysbase/lseek64.c
 --- newlib-2.1.0/libgloss/libsysbase/lseek64.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/lseek64.c	2014-07-07 20:42:52.665812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/lseek64.c	2014-08-01 21:40:01.229113935 -0400
 @@ -0,0 +1,29 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -4876,7 +4876,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/lseek64.c newlib-2.1.0-PS3/libgloss/
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/lseek.c newlib-2.1.0-PS3/libgloss/libsysbase/lseek.c
 --- newlib-2.1.0/libgloss/libsysbase/lseek.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/lseek.c	2014-07-07 20:42:52.665812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/lseek.c	2014-08-01 21:40:01.229113935 -0400
 @@ -0,0 +1,29 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -4909,7 +4909,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/lseek.c newlib-2.1.0-PS3/libgloss/li
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/Makefile.in newlib-2.1.0-PS3/libgloss/libsysbase/Makefile.in
 --- newlib-2.1.0/libgloss/libsysbase/Makefile.in	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/Makefile.in	2014-07-07 20:42:52.665812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/Makefile.in	2014-08-01 21:40:01.229113935 -0400
 @@ -0,0 +1,148 @@
 +# Copyright (c) 1998 Cygnus Support
 +#
@@ -5061,7 +5061,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/Makefile.in newlib-2.1.0-PS3/libglos
 +	$(SHELL) config.status --recheck
 diff -burN newlib-2.1.0/libgloss/libsysbase/mkdir.c newlib-2.1.0-PS3/libgloss/libsysbase/mkdir.c
 --- newlib-2.1.0/libgloss/libsysbase/mkdir.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/mkdir.c	2014-07-07 20:42:52.666812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/mkdir.c	2014-08-01 21:40:01.230113935 -0400
 @@ -0,0 +1,21 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5086,7 +5086,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/mkdir.c newlib-2.1.0-PS3/libgloss/li
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/open.c newlib-2.1.0-PS3/libgloss/libsysbase/open.c
 --- newlib-2.1.0/libgloss/libsysbase/open.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/open.c	2014-07-07 20:42:52.666812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/open.c	2014-08-01 21:40:01.230113935 -0400
 @@ -0,0 +1,31 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5121,7 +5121,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/open.c newlib-2.1.0-PS3/libgloss/lib
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/opendir.c newlib-2.1.0-PS3/libgloss/libsysbase/opendir.c
 --- newlib-2.1.0/libgloss/libsysbase/opendir.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/opendir.c	2014-07-07 20:42:52.666812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/opendir.c	2014-08-01 21:40:01.230113935 -0400
 @@ -0,0 +1,19 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5144,7 +5144,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/opendir.c newlib-2.1.0-PS3/libgloss/
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/read.c newlib-2.1.0-PS3/libgloss/libsysbase/read.c
 --- newlib-2.1.0/libgloss/libsysbase/read.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/read.c	2014-07-07 20:42:52.666812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/read.c	2014-08-01 21:40:01.230113935 -0400
 @@ -0,0 +1,29 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5177,7 +5177,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/read.c newlib-2.1.0-PS3/libgloss/lib
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/readdir.c newlib-2.1.0-PS3/libgloss/libsysbase/readdir.c
 --- newlib-2.1.0/libgloss/libsysbase/readdir.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/readdir.c	2014-07-07 20:42:52.666812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/readdir.c	2014-08-01 21:40:01.230113935 -0400
 @@ -0,0 +1,21 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5202,7 +5202,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/readdir.c newlib-2.1.0-PS3/libgloss/
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/readdir_r.c newlib-2.1.0-PS3/libgloss/libsysbase/readdir_r.c
 --- newlib-2.1.0/libgloss/libsysbase/readdir_r.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/readdir_r.c	2014-07-07 20:42:52.666812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/readdir_r.c	2014-08-01 21:40:01.231113935 -0400
 @@ -0,0 +1,19 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5225,7 +5225,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/readdir_r.c newlib-2.1.0-PS3/libglos
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/rename.c newlib-2.1.0-PS3/libgloss/libsysbase/rename.c
 --- newlib-2.1.0/libgloss/libsysbase/rename.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/rename.c	2014-07-07 20:42:52.667812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/rename.c	2014-08-01 21:40:01.231113935 -0400
 @@ -0,0 +1,26 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5255,7 +5255,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/rename.c newlib-2.1.0-PS3/libgloss/l
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/rewinddir.c newlib-2.1.0-PS3/libgloss/libsysbase/rewinddir.c
 --- newlib-2.1.0/libgloss/libsysbase/rewinddir.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/rewinddir.c	2014-07-07 20:42:52.667812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/rewinddir.c	2014-08-01 21:40:01.231113935 -0400
 @@ -0,0 +1,18 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5277,7 +5277,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/rewinddir.c newlib-2.1.0-PS3/libglos
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/rmdir.c newlib-2.1.0-PS3/libgloss/libsysbase/rmdir.c
 --- newlib-2.1.0/libgloss/libsysbase/rmdir.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/rmdir.c	2014-07-07 20:42:52.667812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/rmdir.c	2014-08-01 21:40:01.231113935 -0400
 @@ -0,0 +1,20 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5301,7 +5301,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/rmdir.c newlib-2.1.0-PS3/libgloss/li
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/sbrk.c newlib-2.1.0-PS3/libgloss/libsysbase/sbrk.c
 --- newlib-2.1.0/libgloss/libsysbase/sbrk.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/sbrk.c	2014-07-07 20:42:52.667812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/sbrk.c	2014-08-01 21:40:01.231113935 -0400
 @@ -0,0 +1,24 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5329,7 +5329,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/sbrk.c newlib-2.1.0-PS3/libgloss/lib
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/seekdir.c newlib-2.1.0-PS3/libgloss/libsysbase/seekdir.c
 --- newlib-2.1.0/libgloss/libsysbase/seekdir.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/seekdir.c	2014-07-07 20:42:52.667812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/seekdir.c	2014-08-01 21:40:01.231113935 -0400
 @@ -0,0 +1,21 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5354,7 +5354,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/seekdir.c newlib-2.1.0-PS3/libgloss/
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/settod.c newlib-2.1.0-PS3/libgloss/libsysbase/settod.c
 --- newlib-2.1.0/libgloss/libsysbase/settod.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/settod.c	2014-07-07 20:42:52.668812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/settod.c	2014-08-01 21:40:01.232113935 -0400
 @@ -0,0 +1,22 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5380,7 +5380,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/settod.c newlib-2.1.0-PS3/libgloss/l
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/sleep.c newlib-2.1.0-PS3/libgloss/libsysbase/sleep.c
 --- newlib-2.1.0/libgloss/libsysbase/sleep.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/sleep.c	2014-07-07 20:42:52.668812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/sleep.c	2014-08-01 21:40:01.232113935 -0400
 @@ -0,0 +1,32 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5416,7 +5416,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/sleep.c newlib-2.1.0-PS3/libgloss/li
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/stat64.c newlib-2.1.0-PS3/libgloss/libsysbase/stat64.c
 --- newlib-2.1.0/libgloss/libsysbase/stat64.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/stat64.c	2014-07-07 20:42:52.668812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/stat64.c	2014-08-01 21:40:01.232113935 -0400
 @@ -0,0 +1,28 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5448,7 +5448,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/stat64.c newlib-2.1.0-PS3/libgloss/l
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/stat.c newlib-2.1.0-PS3/libgloss/libsysbase/stat.c
 --- newlib-2.1.0/libgloss/libsysbase/stat.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/stat.c	2014-07-07 20:42:52.668812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/stat.c	2014-08-01 21:40:01.232113935 -0400
 @@ -0,0 +1,28 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5480,7 +5480,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/stat.c newlib-2.1.0-PS3/libgloss/lib
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/syscalls.c newlib-2.1.0-PS3/libgloss/libsysbase/syscalls.c
 --- newlib-2.1.0/libgloss/libsysbase/syscalls.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/syscalls.c	2014-07-07 20:59:32.170847623 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/syscalls.c	2014-08-01 21:40:01.233113935 -0400
 @@ -0,0 +1,50 @@
 +#include <sys/syscalls.h>
 +
@@ -5534,7 +5534,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/syscalls.c newlib-2.1.0-PS3/libgloss
 +};
 diff -burN newlib-2.1.0/libgloss/libsysbase/telldir.c newlib-2.1.0-PS3/libgloss/libsysbase/telldir.c
 --- newlib-2.1.0/libgloss/libsysbase/telldir.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/telldir.c	2014-07-07 20:42:52.669812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/telldir.c	2014-08-01 21:40:01.233113935 -0400
 @@ -0,0 +1,21 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5559,7 +5559,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/telldir.c newlib-2.1.0-PS3/libgloss/
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/times.c newlib-2.1.0-PS3/libgloss/libsysbase/times.c
 --- newlib-2.1.0/libgloss/libsysbase/times.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/times.c	2014-07-07 20:42:52.669812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/times.c	2014-08-01 21:40:01.233113935 -0400
 @@ -0,0 +1,25 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5588,7 +5588,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/times.c newlib-2.1.0-PS3/libgloss/li
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/truncate.c newlib-2.1.0-PS3/libgloss/libsysbase/truncate.c
 --- newlib-2.1.0/libgloss/libsysbase/truncate.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/truncate.c	2014-07-07 20:42:52.669812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/truncate.c	2014-08-01 21:40:01.233113935 -0400
 @@ -0,0 +1,21 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5613,7 +5613,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/truncate.c newlib-2.1.0-PS3/libgloss
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/umask.c newlib-2.1.0-PS3/libgloss/libsysbase/umask.c
 --- newlib-2.1.0/libgloss/libsysbase/umask.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/umask.c	2014-07-07 20:42:52.669812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/umask.c	2014-08-01 21:40:01.233113935 -0400
 @@ -0,0 +1,18 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5635,7 +5635,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/umask.c newlib-2.1.0-PS3/libgloss/li
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/unlink.c newlib-2.1.0-PS3/libgloss/libsysbase/unlink.c
 --- newlib-2.1.0/libgloss/libsysbase/unlink.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/unlink.c	2014-07-07 20:42:52.669812097 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/unlink.c	2014-08-01 21:40:01.234113935 -0400
 @@ -0,0 +1,24 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5663,7 +5663,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/unlink.c newlib-2.1.0-PS3/libgloss/l
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/utime.c newlib-2.1.0-PS3/libgloss/libsysbase/utime.c
 --- newlib-2.1.0/libgloss/libsysbase/utime.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/utime.c	2014-07-07 20:42:52.670812098 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/utime.c	2014-08-01 21:40:01.234113935 -0400
 @@ -0,0 +1,19 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5686,7 +5686,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/utime.c newlib-2.1.0-PS3/libgloss/li
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/wait.c newlib-2.1.0-PS3/libgloss/libsysbase/wait.c
 --- newlib-2.1.0/libgloss/libsysbase/wait.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/wait.c	2014-07-07 20:42:52.670812098 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/wait.c	2014-08-01 21:40:01.234113935 -0400
 @@ -0,0 +1,19 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5709,7 +5709,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/wait.c newlib-2.1.0-PS3/libgloss/lib
 +}
 diff -burN newlib-2.1.0/libgloss/libsysbase/warning.h newlib-2.1.0-PS3/libgloss/libsysbase/warning.h
 --- newlib-2.1.0/libgloss/libsysbase/warning.h	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/warning.h	2014-07-07 20:42:52.670812098 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/warning.h	2014-08-01 21:40:01.234113935 -0400
 @@ -0,0 +1,43 @@
 +#ifndef __WARNING_H__
 +#define __WARNING_H__
@@ -5756,7 +5756,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/warning.h newlib-2.1.0-PS3/libgloss/
 +#endif /* __WARNING_H__ */
 diff -burN newlib-2.1.0/libgloss/libsysbase/write.c newlib-2.1.0-PS3/libgloss/libsysbase/write.c
 --- newlib-2.1.0/libgloss/libsysbase/write.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/libgloss/libsysbase/write.c	2014-07-07 20:42:52.670812098 -0400
++++ newlib-2.1.0-PS3/libgloss/libsysbase/write.c	2014-08-01 21:40:01.234113935 -0400
 @@ -0,0 +1,29 @@
 +#include "config.h"
 +#include <_ansi.h>
@@ -5789,7 +5789,7 @@ diff -burN newlib-2.1.0/libgloss/libsysbase/write.c newlib-2.1.0-PS3/libgloss/li
 +}
 diff -burN newlib-2.1.0/libgloss/spu/Makefile.in newlib-2.1.0-PS3/libgloss/spu/Makefile.in
 --- newlib-2.1.0/libgloss/spu/Makefile.in	2009-05-07 14:07:35.000000000 -0400
-+++ newlib-2.1.0-PS3/libgloss/spu/Makefile.in	2014-07-07 20:42:52.670812098 -0400
++++ newlib-2.1.0-PS3/libgloss/spu/Makefile.in	2014-08-01 21:40:01.235113935 -0400
 @@ -151,7 +151,7 @@
  .PHONY: install info install-info clean-info
  install:
@@ -5801,7 +5801,7 @@ diff -burN newlib-2.1.0/libgloss/spu/Makefile.in newlib-2.1.0-PS3/libgloss/spu/M
  info:
 diff -burN newlib-2.1.0/newlib/configure.host newlib-2.1.0-PS3/newlib/configure.host
 --- newlib-2.1.0/newlib/configure.host	2013-12-20 05:27:49.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/configure.host	2014-07-07 20:42:52.671812098 -0400
++++ newlib-2.1.0-PS3/newlib/configure.host	2014-08-01 21:40:01.235113935 -0400
 @@ -468,6 +468,10 @@
  	##newlib_cflags="${newlib_cflags} -idirafter ${gcc_dir}include"
  	;;
@@ -5826,9 +5826,20 @@ diff -burN newlib-2.1.0/newlib/configure.host newlib-2.1.0-PS3/newlib/configure.
    powerpc*-*-eabialtivec*)
  	default_newlib_io_long_long="yes"
  	newlib_cflags="${newlib_cflags} -DMISSING_SYSCALL_NAMES"
+diff -burN newlib-2.1.0/newlib/libc/include/reent.h newlib-2.1.0-PS3/newlib/libc/include/reent.h
+--- newlib-2.1.0/newlib/libc/include/reent.h	2013-04-23 05:42:25.000000000 -0400
++++ newlib-2.1.0-PS3/newlib/libc/include/reent.h	2014-08-01 21:41:16.737116618 -0400
+@@ -124,6 +124,7 @@
+ #define _stat_r(__reent, __path, __buff)          stat(__path, __buff)
+ #define _times_r(__reent, __time)                 times(__time)
+ #define _unlink_r(__reent, __path)                unlink(__path)
++#define _access_r(__reent, __path, __amode)       access(__path, __amode)
+ #define _wait_r(__reent, __status)                wait(__status)
+ #define _write_r(__reent, __fd, __buff, __cnt)    write(__fd, __buff, __cnt)
+ #define _gettimeofday_r(__reent, __tp, __tzp)     gettimeofday(__tp, __tzp)
 diff -burN newlib-2.1.0/newlib/libc/include/sys/config.h newlib-2.1.0-PS3/newlib/libc/include/sys/config.h
 --- newlib-2.1.0/newlib/libc/include/sys/config.h	2013-10-23 06:04:42.000000000 -0400
-+++ newlib-2.1.0-PS3/newlib/libc/include/sys/config.h	2014-07-07 20:42:52.672812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/include/sys/config.h	2014-08-01 21:40:01.236113935 -0400
 @@ -236,6 +236,11 @@
  #define _REENT_GLOBAL_ATEXIT
  #endif
@@ -5843,7 +5854,7 @@ diff -burN newlib-2.1.0/newlib/libc/include/sys/config.h newlib-2.1.0-PS3/newlib
  #endif
 diff -burN newlib-2.1.0/newlib/libc/include/sys/unistd.h newlib-2.1.0-PS3/newlib/libc/include/sys/unistd.h
 --- newlib-2.1.0/newlib/libc/include/sys/unistd.h	2013-11-22 17:39:51.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/include/sys/unistd.h	2014-07-07 20:42:52.672812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/include/sys/unistd.h	2014-08-01 21:40:01.236113935 -0400
 @@ -222,7 +222,7 @@
  int     _EXFUN(_execve, (const char *__path, char * const __argv[], char * const __envp[] ));
  #endif
@@ -5855,7 +5866,7 @@ diff -burN newlib-2.1.0/newlib/libc/include/sys/unistd.h newlib-2.1.0-PS3/newlib
  int     _EXFUN(truncate, (const char *, off_t __length));
 diff -burN newlib-2.1.0/newlib/libc/sys/configure newlib-2.1.0-PS3/newlib/libc/sys/configure
 --- newlib-2.1.0/newlib/libc/sys/configure	2013-12-23 15:45:06.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/sys/configure	2014-07-07 20:42:52.675812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/sys/configure	2014-08-01 21:40:01.239113935 -0400
 @@ -794,6 +794,7 @@
  h8300hms
  h8500hms
@@ -5875,7 +5886,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/configure newlib-2.1.0-PS3/newlib/libc/s
  	mmixware) subdirs="$subdirs mmixware"
 diff -burN newlib-2.1.0/newlib/libc/sys/configure.in newlib-2.1.0-PS3/newlib/libc/sys/configure.in
 --- newlib-2.1.0/newlib/libc/sys/configure.in	2012-02-21 17:34:31.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/sys/configure.in	2014-07-07 20:42:52.676812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/sys/configure.in	2014-08-01 21:40:01.240113935 -0400
 @@ -31,6 +31,7 @@
  	h8300hms) AC_CONFIG_SUBDIRS(h8300hms) ;;
  	h8500hms) AC_CONFIG_SUBDIRS(h8500hms) ;;
@@ -5886,7 +5897,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/configure.in newlib-2.1.0-PS3/newlib/lib
  	netware) AC_CONFIG_SUBDIRS(netware) ;;
 diff -burN newlib-2.1.0/newlib/libc/sys/lv2/aclocal.m4 newlib-2.1.0-PS3/newlib/libc/sys/lv2/aclocal.m4
 --- newlib-2.1.0/newlib/libc/sys/lv2/aclocal.m4	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/aclocal.m4	2014-07-07 20:42:52.677812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/aclocal.m4	2014-08-01 21:40:01.241113935 -0400
 @@ -0,0 +1,992 @@
 +# generated automatically by aclocal 1.11 -*- Autoconf -*-
 +
@@ -6882,7 +6893,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/lv2/aclocal.m4 newlib-2.1.0-PS3/newlib/l
 +m4_include([../../../acinclude.m4])
 diff -burN newlib-2.1.0/newlib/libc/sys/lv2/configure newlib-2.1.0-PS3/newlib/libc/sys/lv2/configure
 --- newlib-2.1.0/newlib/libc/sys/lv2/configure	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/configure	2014-07-07 20:42:52.681812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/configure	2014-08-01 21:40:01.245113935 -0400
 @@ -0,0 +1,4989 @@
 +#! /bin/sh
 +# Guess values for system-dependent variables and create Makefiles.
@@ -11875,7 +11886,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/lv2/configure newlib-2.1.0-PS3/newlib/li
 +
 diff -burN newlib-2.1.0/newlib/libc/sys/lv2/configure.in newlib-2.1.0-PS3/newlib/libc/sys/lv2/configure.in
 --- newlib-2.1.0/newlib/libc/sys/lv2/configure.in	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/configure.in	2014-07-07 20:42:52.681812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/configure.in	2014-08-01 21:40:01.245113935 -0400
 @@ -0,0 +1,13 @@
 +dnl This is the newlib/libc/sys/rtems configure.in file.
 +dnl Process this file with autoconf to produce a configure script.
@@ -11892,7 +11903,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/lv2/configure.in newlib-2.1.0-PS3/newlib
 +AC_OUTPUT
 diff -burN newlib-2.1.0/newlib/libc/sys/lv2/getreent.c newlib-2.1.0-PS3/newlib/libc/sys/lv2/getreent.c
 --- newlib-2.1.0/newlib/libc/sys/lv2/getreent.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/getreent.c	2014-07-07 20:42:52.681812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/getreent.c	2014-08-01 21:40:01.245113935 -0400
 @@ -0,0 +1,15 @@
 +#include <reent.h>
 +
@@ -11911,7 +11922,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/lv2/getreent.c newlib-2.1.0-PS3/newlib/l
 +}
 diff -burN newlib-2.1.0/newlib/libc/sys/lv2/lock.c newlib-2.1.0-PS3/newlib/libc/sys/lv2/lock.c
 --- newlib-2.1.0/newlib/libc/sys/lv2/lock.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/lock.c	2014-07-07 20:42:52.682812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/lock.c	2014-08-01 21:40:01.245113935 -0400
 @@ -0,0 +1,37 @@
 +#include <stdint.h>
 +#include <stdlib.h>
@@ -11952,7 +11963,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/lv2/lock.c newlib-2.1.0-PS3/newlib/libc/
 +}
 diff -burN newlib-2.1.0/newlib/libc/sys/lv2/lock_internal.c newlib-2.1.0-PS3/newlib/libc/sys/lv2/lock_internal.c
 --- newlib-2.1.0/newlib/libc/sys/lv2/lock_internal.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/lock_internal.c	2014-07-07 20:42:52.682812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/lock_internal.c	2014-08-01 21:40:01.245113935 -0400
 @@ -0,0 +1,29 @@
 +#include <stdint.h>
 +#include <stdlib.h>
@@ -11985,7 +11996,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/lv2/lock_internal.c newlib-2.1.0-PS3/new
 +}
 diff -burN newlib-2.1.0/newlib/libc/sys/lv2/lock_internal.h newlib-2.1.0-PS3/newlib/libc/sys/lv2/lock_internal.h
 --- newlib-2.1.0/newlib/libc/sys/lv2/lock_internal.h	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/lock_internal.h	2014-07-07 20:42:52.682812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/lock_internal.h	2014-08-01 21:40:01.246113935 -0400
 @@ -0,0 +1,32 @@
 +#ifndef __SYS_LOCK_INTERNAL_H__
 +#define __SYS_LOCK_INTERNAL_H__
@@ -12021,7 +12032,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/lv2/lock_internal.h newlib-2.1.0-PS3/new
 +#endif
 diff -burN newlib-2.1.0/newlib/libc/sys/lv2/lock_recursive.c newlib-2.1.0-PS3/newlib/libc/sys/lv2/lock_recursive.c
 --- newlib-2.1.0/newlib/libc/sys/lv2/lock_recursive.c	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/lock_recursive.c	2014-07-07 20:42:52.682812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/lock_recursive.c	2014-08-01 21:40:01.246113935 -0400
 @@ -0,0 +1,37 @@
 +#include <stdint.h>
 +#include <stdlib.h>
@@ -12062,7 +12073,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/lv2/lock_recursive.c newlib-2.1.0-PS3/ne
 +}
 diff -burN newlib-2.1.0/newlib/libc/sys/lv2/machine/_types.h newlib-2.1.0-PS3/newlib/libc/sys/lv2/machine/_types.h
 --- newlib-2.1.0/newlib/libc/sys/lv2/machine/_types.h	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/machine/_types.h	2014-07-07 20:42:52.682812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/machine/_types.h	2014-08-01 21:40:01.246113935 -0400
 @@ -0,0 +1,16 @@
 +#ifndef _MACHINE__TYPES_H
 +#define _MACHINE__TYPES_H
@@ -12082,7 +12093,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/lv2/machine/_types.h newlib-2.1.0-PS3/ne
 +#endif // _MACHINE__TYPES_H
 diff -burN newlib-2.1.0/newlib/libc/sys/lv2/Makefile.am newlib-2.1.0-PS3/newlib/libc/sys/lv2/Makefile.am
 --- newlib-2.1.0/newlib/libc/sys/lv2/Makefile.am	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/Makefile.am	2014-07-07 20:42:52.683812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/Makefile.am	2014-08-01 21:40:01.246113935 -0400
 @@ -0,0 +1,18 @@
 +## Process this file with automake to generate Makefile.in
 +
@@ -12104,7 +12115,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/lv2/Makefile.am newlib-2.1.0-PS3/newlib/
 +CONFIG_STATUS_DEPENDENCIES = $(newlib_basedir)/configure.host
 diff -burN newlib-2.1.0/newlib/libc/sys/lv2/Makefile.in newlib-2.1.0-PS3/newlib/libc/sys/lv2/Makefile.in
 --- newlib-2.1.0/newlib/libc/sys/lv2/Makefile.in	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/Makefile.in	2014-07-07 20:42:52.683812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/Makefile.in	2014-08-01 21:40:01.247113935 -0400
 @@ -0,0 +1,430 @@
 +# Makefile.in generated by automake 1.11 from Makefile.am.
 +# @configure_input@
@@ -12538,7 +12549,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/lv2/Makefile.in newlib-2.1.0-PS3/newlib/
 +.NOEXPORT:
 diff -burN newlib-2.1.0/newlib/libc/sys/lv2/sys/dirent.h newlib-2.1.0-PS3/newlib/libc/sys/lv2/sys/dirent.h
 --- newlib-2.1.0/newlib/libc/sys/lv2/sys/dirent.h	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/sys/dirent.h	2014-07-07 20:42:52.683812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/sys/dirent.h	2014-08-01 21:40:01.247113935 -0400
 @@ -0,0 +1,63 @@
 +#ifndef __SYS_DIRENT_H__
 +#define __SYS_DIRENT_H__
@@ -12605,7 +12616,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/lv2/sys/dirent.h newlib-2.1.0-PS3/newlib
 +#endif //__DIRENT_H__
 diff -burN newlib-2.1.0/newlib/libc/sys/lv2/sys/lock.h newlib-2.1.0-PS3/newlib/libc/sys/lv2/sys/lock.h
 --- newlib-2.1.0/newlib/libc/sys/lv2/sys/lock.h	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/sys/lock.h	2014-07-07 20:42:52.684812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/sys/lock.h	2014-08-01 21:40:01.247113935 -0400
 @@ -0,0 +1,47 @@
 +#ifndef __SYS_LOCK_H__
 +#define __SYS_LOCK_H__
@@ -12656,7 +12667,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/lv2/sys/lock.h newlib-2.1.0-PS3/newlib/l
 +#endif /* __SYS_LOCK_H__ */
 diff -burN newlib-2.1.0/newlib/libc/sys/lv2/sys/syscalls.h newlib-2.1.0-PS3/newlib/libc/sys/lv2/sys/syscalls.h
 --- newlib-2.1.0/newlib/libc/sys/lv2/sys/syscalls.h	1969-12-31 19:00:00.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/sys/syscalls.h	2014-07-07 20:42:52.684812098 -0400
++++ newlib-2.1.0-PS3/newlib/libc/sys/lv2/sys/syscalls.h	2014-08-01 21:40:01.247113935 -0400
 @@ -0,0 +1,74 @@
 +#ifndef __SYSCALLS_H__
 +#define __SYSCALLS_H__
@@ -12734,7 +12745,7 @@ diff -burN newlib-2.1.0/newlib/libc/sys/lv2/sys/syscalls.h newlib-2.1.0-PS3/newl
 +#endif
 diff -burN newlib-2.1.0/newlib/libm/mathfp/sf_sine.c newlib-2.1.0-PS3/newlib/libm/mathfp/sf_sine.c
 --- newlib-2.1.0/newlib/libm/mathfp/sf_sine.c	2000-02-17 14:39:52.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libm/mathfp/sf_sine.c	2014-07-07 20:43:40.914813812 -0400
++++ newlib-2.1.0-PS3/newlib/libm/mathfp/sf_sine.c	2014-08-01 21:40:01.248113935 -0400
 @@ -26,6 +26,7 @@
  
  static const float HALF_PI = 1.570796326;
@@ -12773,7 +12784,7 @@ diff -burN newlib-2.1.0/newlib/libm/mathfp/sf_sine.c newlib-2.1.0-PS3/newlib/lib
      N = (int) (y * ONE_OVER_PI - 0.5);
 diff -burN newlib-2.1.0/newlib/libm/mathfp/s_sine.c newlib-2.1.0-PS3/newlib/libm/mathfp/s_sine.c
 --- newlib-2.1.0/newlib/libm/mathfp/s_sine.c	2000-02-17 14:39:52.000000000 -0500
-+++ newlib-2.1.0-PS3/newlib/libm/mathfp/s_sine.c	2014-07-07 20:42:52.685812098 -0400
++++ newlib-2.1.0-PS3/newlib/libm/mathfp/s_sine.c	2014-08-01 21:40:01.248113935 -0400
 @@ -74,6 +74,7 @@
  
  static const double HALF_PI = 1.57079632679489661923;
