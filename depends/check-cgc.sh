@@ -5,6 +5,6 @@
 type cgc 1>/dev/null 2>&1|| { if [ ${depends_not_met} -eq 1 ]; then
 					echo -n >&2 ", C for Graphics (cg or cgc)";
 				else
-					echo -n >&2 "Please install C for Graphics (cg or cgc)";
+					echo -n >&2 "Please install C for Graphics (cg or cgc) (https://developer.nvidia.com/cg-toolkit-download)";
 					depends_not_met=1;
 				fi; }
