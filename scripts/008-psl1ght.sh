@@ -1,14 +1,10 @@
 #!/bin/sh -e
 # psl1ght.sh by Dan Peori (dan.peori@oopo.net)
-PSL1GHT_SDK="psl1ght"
+PSL1GHT_SDK="PSL1GHT"
 
 ## Download the source code.
-if [ ! -f ${PSL1GHT_SDK}.tar.gz ]; then
-  wget --no-check-certificate https://github.com/ps3dev/${PSL1GHT_SDK}/tarball/master -O ${PSL1GHT_SDK}.tar.gz
-fi
-
-## Unpack the source code.
-rm -Rf ${PSL1GHT_SDK} && mkdir ${PSL1GHT_SDK} && tar --strip-components=1 --directory=${PSL1GHT_SDK} -zxvf ${PSL1GHT_SDK}.tar.gz
+rm -rf ${PSL1GHT_SDK}
+git clone https://github.com/Spork-Schivago/${PSL1GHT_SDK}
 
 ## Patch the source code if a patch file exists.
 if [ -f ../patches/${PSL1GHT_SDK}.patch ]; then
