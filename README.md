@@ -1,6 +1,4 @@
-This project is now being maintained by [ChillyWillyGuru](https://github.com/ChillyWillyGuru).  
-You should highly consider using his cloned copy of this repository.   I no longer have the time  
-or interest to work on this and he is fixing bugs, updating the various libraries, etc.  
+This project is now being maintained by [ChillyWillyGuru](https://github.com/ChillyWillyGuru).  You should highly consider using his cloned copy of this repository.  I no longer have the time or interest to work on this and he is fixing bugs, updating the various libraries, etc.  
 
 You can find a copy of his repository here:  
 
